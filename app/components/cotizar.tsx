@@ -1,5 +1,5 @@
 "use client"
-import { useState } from 'react';
+import { useState, ChangeEvent, FormEvent } from 'react';
 
 export default function Cotizar() {
     const [formData, setFormData] = useState({
@@ -10,19 +10,19 @@ export default function Cotizar() {
         medidas: '',
     });
 
-    const handleChange = (e) => {
+    const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         // Construir el mensaje de WhatsApp
         const mensaje = `Hola, me gustaría solicitar una cotización para un corte a medida. Aquí están los detalles:\n\nNombre: ${formData.nombre}\nEmail: ${formData.email}\nTeléfono: ${formData.telefono}\nMedidas: ${formData.medidas}\nDetalles: ${formData.detalles}`;
 
         // Número de teléfono de WhatsApp (reemplaza con el tuyo)
-        const numeroWhatsApp = '1234567890'; // Incluye el código de país sin signos "+"
+        const numeroWhatsApp: string = '1234567890'; // Incluye el código de país sin signos "+"
         const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
 
         // Redirigir al usuario a WhatsApp
@@ -92,7 +92,7 @@ export default function Cotizar() {
                             value={formData.detalles}
                             onChange={handleChange}
                             className="w-full border-gray-300 bg-crema rounded-md shadow-sm"
-                            rows="4"
+                            rows={4}
                         />
                     </div>
                     <button
