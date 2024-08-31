@@ -22,30 +22,26 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
+import Logo from "../../public/logoletras.svg"
+import Image from 'next/image'
 
 const products = [
-  { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-  { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-  { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-  { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
-]
-const callsToAction = [
-  { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-  { name: 'Contact sales', href: '#', icon: PhoneIcon },
+  { name: 'Cortes a medida', description: 'Trabajamos una amplia variedad de cortes', href: '/servicios/cortes-a-medida', icon: ChartPieIcon },
+  { name: 'Muebles a medida', description: 'Lo creamos especialmente para vos', href: '/servicios/muebles-a-medida', icon: CursorArrowRaysIcon },
+  { name: 'Restauración', description: 'Cotizá tu restauración', href: '/servicios/restauracion', icon: FingerPrintIcon },
 ]
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-marron">
+    <header className="bg-marron fixed top-0 left-0 w-full z-50">
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only"></span>
             <div className='flex justify-center items-center gap-2'>
-                <img alt="" src="./logoletras.svg" className="h-12 w-auto" />
+                <Image alt="" src={Logo} className="h-12 w-auto" />
                 <h5 className='text-beige font-bold text-md '>Luisi Decoraciones</h5>
             </div>
           </a>
@@ -62,7 +58,7 @@ export default function Navbar() {
         </div>
         
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-        <a href="#" className="text-sm font-semibold leading-6 text-beige">
+        <a href="/" className="text-sm font-semibold leading-6 text-beige">
             Inicio
           </a>
           <Popover className="relative">
@@ -98,13 +94,13 @@ export default function Navbar() {
             </PopoverPanel>
           </Popover>
 
-          <a href="#" className="text-sm font-semibold leading-6 text-beige">
+          <a href="/productos" className="text-sm font-semibold leading-6 text-beige">
             Productos
           </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-beige">
+          <a href="/nosotros" className="text-sm font-semibold leading-6 text-beige">
             Nosotros
           </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-beige">
+          <a href="/contacto" className="text-sm font-semibold leading-6 text-beige">
             Contacto
           </a>
         </PopoverGroup>
@@ -114,7 +110,7 @@ export default function Navbar() {
         <div className="fixed inset-0 z-10" />
         <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-marron px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
+            <a href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Luisi Decoraciones</span>
               <div className='flex justify-center items-center gap-2'>
                 <img alt="" src="./logoletras.svg" className="h-12 w-auto" />
@@ -134,7 +130,7 @@ export default function Navbar() {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
               <a
-                  href="#"
+                  href="/"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-beige hover:bg-beige hover:text-marron"
                 >
                   Inicio
@@ -145,7 +141,7 @@ export default function Navbar() {
                     <ChevronDownIcon aria-hidden="true" className="h-5 w-5 flex-none group-data-[open]:rotate-180" />
                   </DisclosureButton>
                   <DisclosurePanel className="mt-2 space-y-2">
-                    {[...products, ...callsToAction].map((item) => (
+                    {[...products].map((item) => (
                       <DisclosureButton
                         key={item.name}
                         as="a"
@@ -158,19 +154,19 @@ export default function Navbar() {
                   </DisclosurePanel>
                 </Disclosure>
                 <a
-                  href="#"
+                  href="/productos"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-beige hover:bg-beige hover:text-marron"
                 >
                   Productos
                 </a>
                 <a
-                  href="#"
+                  href="/nosotros"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-beige hover:bg-beige hover:text-marron"
                 >
                   Nosotros
                 </a>
                 <a
-                  href="#"
+                  href="/contacto"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-beige hover:bg-beige hover:text-marron"
                 >
                   Contacto

@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Fondo from '../../public/fondo.webp';
-import { CheckBadgeIcon, StarIcon, ChartBarIcon } from '@heroicons/react/24/solid';
+import { CheckBadgeIcon, StarIcon, WrenchIcon } from '@heroicons/react/24/solid';
+import { WrenchScrewdriverIcon } from '@heroicons/react/24/outline';
+import { HiWrenchScrewdriver } from 'react-icons/hi2';
 
 export default function NosotrosHero() {
     return (
@@ -32,7 +34,7 @@ export default function NosotrosHero() {
                         <CheckBadgeIcon className="w-8 h-8" />
                     </div>
                     <div>
-                        <p className="text-gray-700 text-xl font-semibold">+80 años en el rubro</p>
+                        <p className="text-gray-700 text-xl font-semibold">+90 años en el rubro</p>
                     </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -45,10 +47,10 @@ export default function NosotrosHero() {
                 </div>
                 <div className="flex items-center gap-4">
                     <div className="text-marron p-4 rounded-full flex items-center justify-center">
-                        <ChartBarIcon className="w-8 h-8" />
+                        <HiWrenchScrewdriver className="w-8 h-8" />
                     </div>
                     <div>
-                        <p className="text-gray-700 text-xl font-semibold">Calidad garantizada</p>
+                        <p className="text-gray-700 text-xl font-semibold">Diseños a medida</p>
                     </div>
                 </div>
             </div>

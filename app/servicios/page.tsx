@@ -1,8 +1,12 @@
 import Link from "next/link";
+import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 
-export default function ServiciosHero() {
+export default function Servicios() {
     return (
-        <div className="bg-gris min-h-screen flex flex-col items-center py-12">
+        <>
+        <Navbar/>
+        <div className="bg-gris min-h-screen flex flex-col items-center pt-32 pb-24">
             <h2 className="text-crema text-4xl md:text-5xl font-bold text-center pb-12">Servicios</h2>
             <div className="w-full max-w-5xl flex flex-col lg:flex-row lg:gap-8 px-6">
                 <div className="bg-white shadow-[0_8px_15px_rgba(255,255,255,0.2)] rounded-2xl p-6 flex flex-col justify-between h-96 pt-8 lg:h-auto lg:max-w-xs lg:w-1/3 mb-8 lg:mb-0">
@@ -14,7 +18,7 @@ export default function ServiciosHero() {
                         </p>
                     </div>
                     <div className="flex justify-center">
-                        <Link href="/servicios">
+                        <Link href="/Servicios/">
                             <button className="bg-marron text-crema font-semibold py-2 px-6 rounded-md hover:bg-beige hover:text-marron transition-colors">
                                 Ver más
                             </button>
@@ -30,7 +34,7 @@ export default function ServiciosHero() {
                         </p>
                     </div>
                     <div className="flex justify-center">
-                        <Link href="/servicios">
+                        <Link href="/Servicios">
                             <button className="bg-marron text-crema font-semibold py-2 px-6 rounded-md hover:bg-beige hover:text-marron transition-colors">
                                 Ver más
                             </button>
@@ -46,7 +50,7 @@ export default function ServiciosHero() {
                         </p>
                     </div>
                     <div className="flex justify-center">
-                        <Link href="/servicios">
+                        <Link href="/Servicios">
                             <button className="bg-marron text-crema font-semibold py-2 px-6 rounded-md hover:bg-beige hover:text-marron transition-colors">
                                 Ver más
                             </button>
@@ -55,5 +59,7 @@ export default function ServiciosHero() {
                 </div>
             </div>
         </div>
+        <Footer/>
+        </>
     );
 }

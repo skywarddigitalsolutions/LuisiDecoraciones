@@ -3,7 +3,7 @@ import Fondo from "../../public/fondo.webp"
 import "./hero.css"
 export default function Hero() {
     return(
-        <div className=" h-[80vh] lg:min-h-screen relative flex flex-col justify-center items-center ">
+        <div className=" h-[90vh] lg:min-h-screen relative flex flex-col justify-center items-center ">
             <div className="absolute inset-0 bg-black">
                 <Image
             src={Fondo}

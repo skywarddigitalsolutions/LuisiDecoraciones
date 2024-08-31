@@ -50,7 +50,7 @@ export default function Footer() {
             {/* Derechos reservados y crédito */}
             <div className="border-t border-crema mt-8 pt-4 text-center text-sm">
                 <p>&copy; {new Date().getFullYear()} Todos los derechos reservados.</p>
-                <p>Hecho por <a href="https://skyward-digital-solutions.com" className="text-beige hover:underline" target="_blank" rel="noopener noreferrer">Skyward Digital Solutions</a></p>
+                <p>Hecho por <a href="https://sds.com.ar" className="text-crema hover:underline" target="_blank" rel="noopener noreferrer">Skyward Digital Solutions</a></p>
             </div>
         </footer>
     );

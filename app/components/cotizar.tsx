@@ -1,13 +1,13 @@
-"use client"
+"use client";
 import { useState, ChangeEvent, FormEvent } from 'react';
 
-export default function Cotizar() {
+export default function Restauracion() {
     const [formData, setFormData] = useState({
         nombre: '',
         email: '',
         telefono: '',
+        descripcion: '',
         detalles: '',
-        medidas: '',
     });
 
     const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -19,7 +19,7 @@ export default function Cotizar() {
         e.preventDefault();
 
         // Construir el mensaje de WhatsApp
-        const mensaje = `Hola, me gustaría solicitar una cotización para un corte a medida. Aquí están los detalles:\n\nNombre: ${formData.nombre}\nEmail: ${formData.email}\nTeléfono: ${formData.telefono}\nMedidas: ${formData.medidas}\nDetalles: ${formData.detalles}`;
+        const mensaje = `Hola, me gustaría solicitar una cotización para la restauración de un mueble. Aquí están los detalles:\n\nNombre: ${formData.nombre}\nEmail: ${formData.email}\nTeléfono: ${formData.telefono}\nDescripción del Mueble: ${formData.descripcion}\nDetalles Adicionales: ${formData.detalles}`;
 
         // Número de teléfono de WhatsApp (reemplaza con el tuyo)
         const numeroWhatsApp: string = '1234567890'; // Incluye el código de país sin signos "+"
@@ -31,7 +31,7 @@ export default function Cotizar() {
 
     return (
         <div className="bg-gris min-h-screen py-12 px-6">
-            <h2 className="text-crema text-4xl md:text-5xl font-bold text-center mb-6">Cotiza tu corte a medida</h2>
+            <h2 className="text-crema text-4xl md:text-5xl font-bold text-center mb-6">Restauración de Muebles</h2>
             <p className="text-crema/50 text-lg text-center mb-12">Completa el formulario para recibir una cotización personalizada.</p>
 
             <div className="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow-lg">
@@ -73,19 +73,19 @@ export default function Cotizar() {
                         />
                     </div>
                     <div>
-                        <label htmlFor="medidas" className="block text-marron font-semibold mb-2">Medidas del corte</label>
+                        <label htmlFor="descripcion" className="block text-marron font-semibold mb-2">Descripción del Mueble</label>
                         <input
                             type="text"
-                            id="medidas"
-                            name="medidas"
-                            value={formData.medidas}
+                            id="descripcion"
+                            name="descripcion"
+                            value={formData.descripcion}
                             onChange={handleChange}
                             className="w-full border-gray-300 bg-crema rounded-md shadow-sm"
                             required
                         />
                     </div>
                     <div>
-                        <label htmlFor="detalles" className="block text-marron font-semibold mb-2">Detalles adicionales</label>
+                        <label htmlFor="detalles" className="block text-marron font-semibold mb-2">Detalles Adicionales</label>
                         <textarea
                             id="detalles"
                             name="detalles"
@@ -99,7 +99,7 @@ export default function Cotizar() {
                         type="submit"
                         className="bg-marron text-beige font-semibold py-3 px-6 rounded-md hover:bg-beige hover:text-marron transition-colors"
                     >
-                        Solicitar cotización
+                        Solicitar Cotización
                     </button>
                 </form>
             </div>
