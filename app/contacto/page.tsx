@@ -1,59 +1,72 @@
 "use client";
-import Navbar from '../components/navbar';
-import Footer from '../components/footer';
-import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import Footer from "../components/footer";
+import Navbar from "../components/navbar";
+import { FaPhoneAlt, FaMapMarkerAlt, FaInstagram, FaFacebook } from "react-icons/fa";
 
 export default function Contacto() {
     return (
         <>
-        <Navbar />
-        <div className="bg-crema py-32 px-6">
-            <h2 className="text-marron text-4xl md:text-5xl font-bold text-center mb-12">Contacto</h2>
-            <div className="flex flex-col md:flex-row md:justify-between items-center md:items-start">
-                {/* Datos de contacto */}
-                <div className="md:w-1/2 mb-8 md:mb-0">
-                    <h3 className="text-marron text-2xl font-semibold mb-4">Información de Contacto</h3>
-                    <p className="text-marron mb-4">
-                        <strong>Dirección:</strong> Av. Ejemplo 123, Monte Castro, CABA, Argentina
+            <Navbar />
+            <div className="relative my-12 bg-crema py-20 px-4 lg:px-10">
+                
+                {/* Título de la sección */}
+                <div className="text-center mb-12 flex flex-col justify-center items-center">
+                    <h2 className="text-4xl lg:text-5xl text-marron font-bold mb-4">Contáctanos</h2>
+                    <p className="text-lg text-gray-600 max-w-2xl text-center">
+                        Estamos aquí para ayudarte. No dudes en ponerte en contacto con nosotros para cualquier consulta o pedido.
                     </p>
-                    <p className="text-marron mb-4">
-                        <strong>Teléfono:</strong> +54 11 1234-5678
-                    </p>
-                    <p className="text-marron mb-4">
-                        <strong>Email:</strong> contacto@luisidecoraciones.com
-                    </p>
-                    <h3 className="text-marron text-2xl font-semibold mt-8 mb-4">Horarios de Atención</h3>
-                    <p className="text-marron mb-2">Lunes a Viernes: 9:00 AM - 6:30 PM</p>
-                    <p className="text-marron">Sábados: 9:00 AM - 1:00 PM</p>
-                    
-                    {/* Redes Sociales */}
-                    <div className="mt-8 flex justify-center md:justify-start">
-                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-marron mx-3 text-xl hover:text-gray-700">
-                            <FaFacebookF />
-                        </a>
-                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-marron mx-3 text-xl hover:text-gray-700">
-                            <FaInstagram />
-                        </a>
-                        <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="text-marron mx-3 text-xl hover:text-gray-700">
-                            <FaTwitter />
-                        </a>
-                        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-marron mx-3 text-xl hover:text-gray-700">
-                            <FaLinkedin />
-                        </a>
+                </div>
+
+                {/* Contenedor general con borde redondeado */}
+                <div className="flex flex-col lg:flex-row bg-white rounded-2xl overflow-hidden shadow-lg max-w-5xl mx-auto">
+
+                    {/* Información de contacto */}
+                    <div className="bg-white p-8 lg:w-1/2">
+                        <h3 className="text-2xl font-semibold text-marron mb-12">Información de Contacto</h3>
+                        <div className="flex items-center mb-4">
+                            <FaMapMarkerAlt className="text-2xl text-marron mr-4" />
+                            <p>Lascano 5277, Monte Castro, Buenos Aires, Argentina</p>
+                        </div>
+                        <div className="flex items-center mb-4">
+                            <FaPhoneAlt className="text-2xl text-marron mr-4" />
+                            <p>+54 11 1234-5678</p> {/* Reemplaza con el número real */}
+                        </div>
+                        <div className="flex items-center mb-4">
+                            <FaInstagram className="text-2xl text-marron mr-4" />
+                            <a href="https://instagram.com/luisidecoraciones" target="_blank" rel="noopener noreferrer" className="hover:text-verdeoscuro">
+                                @luisidecoraciones
+                            </a>
+                        </div>
+                        <div className="flex items-center">
+                            <FaFacebook className="text-2xl text-marron mr-4" />
+                            <a href="https://facebook.com/luisidecoraciones" target="_blank" rel="noopener noreferrer" className="hover:text-verdeoscuro">
+                                Luisi Decoraciones
+                            </a>
+                        </div>
+                    </div>
+
+                    {/* Imagen del local */}
+                    <div className="lg:w-1/2">
+                        <img
+                            src="./fondo.jpg"  // Reemplaza con la ruta correcta de la imagen del local
+                            alt="Imagen del Local de Luisi Decoraciones"
+                            className="w-full h-full object-cover rounded-lg"
+                        />
                     </div>
                 </div>
 
-                {/* Imagen del local */}
-                <div className="md:w-1/2">
-                    <img
-                        src="/path/to/store-image.jpg"  // Reemplaza con la ruta correcta de la imagen
-                        alt="Imagen del Local"
-                        className="w-full h-auto object-cover rounded-2xl shadow-lg"
-                    />
+                {/* Mapa embebido */}
+                <div className="text-center mt-12">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.2334465585043!2d-58.5209641!3d-34.6158896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb7590a2c7709%3A0x62e8de89ffb0d496!2sLascano%205277%2C%20C1417APJ%20CABA%2C%20Argentina!5e0!3m2!1sen!2s!4v1693504165462!5m2!1sen!2s"
+                        className="w-full h-[400px] rounded-lg border-none"
+                        loading="lazy"
+                        title="Mapa de ubicación"
+                        allowFullScreen
+                    ></iframe>
                 </div>
             </div>
-        </div>
-        <Footer />
+            <Footer />       
         </>
     );
 }
