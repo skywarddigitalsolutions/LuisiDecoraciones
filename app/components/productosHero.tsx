@@ -7,8 +7,8 @@ export default function ProductosHero() {
             <h2 className="text-crema text-4xl md:text-5xl font-bold text-center mb-6">Productos</h2>
             <p className="text-crema text-lg text-center mb-12">¿Qué estás buscando?</p>
 
-            <div className="flex flex-col gap-8 lg:flex-row lg:justify-center lg:gap-8">
-                <div className="relative w-full max-w-xs h-[300px] mx-auto">
+            <div className="flex flex-col gap-8 lg:gap-12 lg:flex-row lg:justify-center lg:mt-12">
+                <div className="relative w-full max-w-xs lg:max-w-lg h-[300px] lg:h-[450px] mx-auto">
                     <div className="absolute inset-0 bg-black rounded-2xl"></div>
                     <Image 
                         src={Producto}
@@ -24,7 +24,7 @@ export default function ProductosHero() {
                     </div>
                 </div>
 
-                <div className="relative w-full max-w-xs h-[300px] mx-auto">
+                <div className="relative w-full max-w-xs lg:max-w-lg h-[300px] lg:h-[450px] mx-auto">
                     <div className="absolute inset-0 bg-black rounded-2xl"></div>
                     <Image 
                         src={Producto}
@@ -40,7 +40,7 @@ export default function ProductosHero() {
                     </div>
                 </div>
 
-                <div className="relative w-full max-w-xs h-[300px] mx-auto">
+                <div className="relative w-full max-w-xs lg:max-w-lg h-[300px] lg:h-[450px] mx-auto">
                     <div className="absolute inset-0 bg-black rounded-2xl"></div>
                     <Image 
                         src={Producto}

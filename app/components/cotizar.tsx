@@ -1,5 +1,6 @@
 "use client";
 import { useState, ChangeEvent, FormEvent } from 'react';
+import Image from 'next/image'; // Importa el componente Image para la imagen del ícono
 
 export default function Restauracion() {
     const [formData, setFormData] = useState({
@@ -30,7 +31,7 @@ export default function Restauracion() {
     };
 
     return (
-        <div className="bg-gris min-h-screen py-12 px-6">
+        <div className="bg-gris min-h-screen py-12 px-6 relative">
             <h2 className="text-crema text-4xl md:text-5xl font-bold text-center mb-6">Restauración de Muebles</h2>
             <p className="text-crema/50 text-lg text-center mb-12">Completa el formulario para recibir una cotización personalizada.</p>
 
@@ -103,6 +104,24 @@ export default function Restauracion() {
                     </button>
                 </form>
             </div>
+
+            {/* Imagen de fondo flotante */}
+            <div className="absolute bottom-0 right-0 w-[80%] h-[12vh] lg:h-[35vh] overflow-hidden max-w-full">
+    <div className="relative w-full h-full transform translate-x-[35%]"> {/* Aumenté el translate-x a 20% */}
+        <Image
+            src="/iconcotizar.png"
+            alt="Icono de Restauración"
+            layout="fill"
+            objectFit="contain"
+            priority={true}
+        />
+    </div>
+</div>
+
+
+
+
+
         </div>
     );
 }

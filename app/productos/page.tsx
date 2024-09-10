@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import { FaCheckCircle, FaRuler } from 'react-icons/fa'; // Importing icons from react-icons
+import { GiWoodBeam } from 'react-icons/gi';
 
 const productos = [
     {
@@ -12,7 +13,7 @@ const productos = [
         descripcion: 'Mesa elegante hecha de roble natural.',
         caracteristicas: [
             { icono: <FaRuler className="w-8 h-8 text-marron" />, texto: '200x100 cm' },
-            { icono: <FaCheckCircle className="w-8 h-8 text-marron" />, texto: 'Roble' },
+            { icono: <GiWoodBeam className="w-8 h-8 text-marron" />, texto: 'Roble' },
         ],
         imagen: '/path/to/image.jpg',  // Reemplaza con la ruta correcta
         whatsapp: '1234567890',
@@ -24,7 +25,7 @@ const productos = [
         descripcion: 'Estantería moderna hecha de fibrofácil.',
         caracteristicas: [
             { icono: <FaRuler className="w-8 h-8 text-marron" />, texto: '180x80 cm' },
-            { icono: <FaCheckCircle className="w-8 h-8 text-marron" />, texto: 'Fibrofácil' },
+            { icono: <GiWoodBeam className="w-8 h-8 text-marron" />, texto: 'Fibrofácil' },
         ],
         imagen: '/path/to/image.jpg',  // Reemplaza con la ruta correcta
         whatsapp: '1234567890',
