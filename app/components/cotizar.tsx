@@ -106,7 +106,7 @@ export default function Restauracion() {
             </div>
 
             {/* Imagen de fondo flotante */}
-            <div className="absolute bottom-0 right-0 w-[80%] h-[12vh] lg:h-[35vh] overflow-hidden max-w-full">
+            <div className="absolute bottom-0 right-0 w-[80%] h-[12vh] lg:h-[35vh] overflow-hidden max-w-full z-0">
     <div className="relative w-full h-full transform translate-x-[35%]"> {/* Aumenté el translate-x a 20% */}
         <Image
             src="/iconcotizar.png"

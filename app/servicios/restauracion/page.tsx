@@ -35,7 +35,7 @@ export default function Restauracion() {
             <Navbar />
             <div className="bg-crema min-h-screen py-12 px-6">
                 <h2 className="text-marron text-4xl md:text-5xl font-bold text-center mb-6 pt-24">Restauración de Muebles</h2>
-                <p className="text-marron/70 text-lg text-center mb-12">
+                <p className="text-marron/70 text-lg text-center mb-12 mx-auto lg:mx-24">
                     Nos especializamos en la reparación y restauración de muebles y estructuras de madera. Sabemos lo importante que es mantener tus muebles en perfecto estado.
                 </p>
 
