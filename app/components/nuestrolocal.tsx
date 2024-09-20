@@ -1,9 +1,12 @@
 "use client";
 import Image from 'next/image';
 import Slider from 'react-slick';
-import Local1 from '../../public/fototaller1.jpg'; 
-import Local2 from '../../public/fototaller2.jpeg';
-import Local3 from '../../public/fototaller3.jpeg';
+import Local1 from '../../public/fototaller1.webp'; 
+import Local2 from '../../public/fototaller2.webp';
+import Local3 from '../../public/fototaller3.webp';
+import Local4 from '../../public/fototaller4.webp'; 
+import Local5 from '../../public/fototaller5.webp';
+import Local6 from '../../public/fototaller6.webp';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -51,8 +54,24 @@ export default function NuestroLocal() {
                     </div>
                     <div className="relative w-full h-96">
                         <Image 
-                            src={Local1} 
+                            src={Local4} 
                             alt="Foto del local 4" 
+                            layout="fill" 
+                            className="object-cover rounded-lg" 
+                        />
+                    </div>
+                    <div className="relative w-full h-96">
+                        <Image 
+                            src={Local5} 
+                            alt="Foto del local 5" 
+                            layout="fill" 
+                            className="object-cover rounded-lg" 
+                        />
+                    </div>
+                    <div className="relative w-full h-96">
+                        <Image 
+                            src={Local6} 
+                            alt="Foto del local 6" 
                             layout="fill" 
                             className="object-cover rounded-lg" 
                         />
@@ -89,12 +108,28 @@ export default function NuestroLocal() {
                 </div>
                 <div className="relative w-full h-96">
                     <Image 
-                        src={Local1} 
+                        src={Local4} 
                         alt="Foto del local 4" 
                         layout="fill" 
                         className="object-cover rounded-lg" 
                     />
                 </div>
+                <div className="relative w-full h-96">
+                        <Image 
+                            src={Local5} 
+                            alt="Foto del local 5" 
+                            layout="fill" 
+                            className="object-cover rounded-lg" 
+                        />
+                    </div>
+                    <div className="relative w-full h-96">
+                        <Image 
+                            src={Local6} 
+                            alt="Foto del local 6" 
+                            layout="fill" 
+                            className="object-cover rounded-lg" 
+                        />
+                    </div>
                 {/* Añade más imágenes aquí */}
             </div>
             
