@@ -1,10 +1,17 @@
 "use client";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
-
+import Head from "next/head";
 export default function Nosotros() {
     return (
         <>
+             <Head>
+                <title>Nosotros | Luisi Decoraciones</title>
+                <meta 
+                    name="description" 
+                    content="Luisi Decoraciones es una empresa familiar con más de 80 años de experiencia, ofreciendo productos de carpintería de la mejor calidad en el barrio de Monte Castro." 
+                />                
+            </Head>
             <Navbar />
             <div className="relative my-12 bg-crema py-20 px-4 lg:px-10">
                 

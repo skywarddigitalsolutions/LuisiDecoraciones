@@ -4,7 +4,7 @@ import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import { FaCheckCircle, FaRuler } from 'react-icons/fa'; // Importing icons from react-icons
 import { GiWoodBeam } from 'react-icons/gi';
-
+import Head from 'next/head';
 
 const productos = [
 
@@ -411,6 +411,13 @@ export default function Productos() {
 
     return (
         <>
+        <Head>
+        <title>Productos | Luisi Decoraciones</title>
+    <meta 
+        name="description" 
+        content="Descubre una amplia variedad de productos de carpintería de alta calidad en Luisi Decoraciones. Ofrecemos cortes a medida, maderas, muebles personalizados y mucho más en Monte Castro." />
+
+        </Head>
         <Navbar />
         <div className="bg-crema min-h-screen py-32 px-6">
             <h2 className="text-marron text-4xl md:text-5xl font-bold text-center mb-6">Nuestros Productos</h2>
