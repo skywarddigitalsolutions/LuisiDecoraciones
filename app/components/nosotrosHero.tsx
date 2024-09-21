@@ -14,7 +14,7 @@ export default function NosotrosHero() {
                     <div className="absolute inset-0 bg-marron rounded-2xl lg:rounded-lg -z-10"></div>
                     <Image 
                         src={Fondo}
-                        alt="Historia"
+                        alt="Historia de Luisi"
                         width={1920}
                         height={1080}
                         className="object-cover w-full h-full rounded-2xl lg:rounded-lg"

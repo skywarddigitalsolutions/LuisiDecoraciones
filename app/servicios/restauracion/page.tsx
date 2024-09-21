@@ -2,7 +2,7 @@
 import { useState, ChangeEvent, FormEvent } from 'react';
 import Footer from "@/app/components/footer";
 import Navbar from "@/app/components/navbar";
-
+import Head from 'next/head';
 export default function Restauracion() {
     const [formData, setFormData] = useState({
         nombre: '',
@@ -23,7 +23,7 @@ export default function Restauracion() {
         const mensaje = `Hola, me gustaría solicitar una cotización para la restauración de un mueble. Aquí están los detalles:\n\nNombre: ${formData.nombre}\nTeléfono: ${formData.telefono}\nDescripción del Mueble: ${formData.descripcion}\nDetalles Adicionales: ${formData.detalles}`;
 
         // Número de teléfono de WhatsApp (reemplaza con el tuyo)
-        const numeroWhatsApp: string = '1234567890'; // Incluye el código de país sin signos "+"
+        const numeroWhatsApp: string = '+541151742249'; // Incluye el código de país sin signos "+"
         const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
 
         // Redirigir al usuario a WhatsApp
@@ -32,6 +32,14 @@ export default function Restauracion() {
 
     return (
         <>
+             <Head>
+                <title>Restauración de Muebles | Luisi Decoraciones</title>
+                <meta
+                    name="description"
+                    content="Especialistas en la reparación y restauración de muebles y estructuras de madera. Mantén tus muebles en perfecto estado con nuestro servicio de restauración."
+                />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+            </Head>
             <Navbar />
             <div className="bg-crema min-h-screen py-12 px-6">
                 <h2 className="text-marron text-4xl md:text-5xl font-bold text-center mb-6 pt-24">Restauración de Muebles</h2>

@@ -1,5 +1,6 @@
 import Navbar from '../../components/navbar';
 import Footer from '../../components/footer';
+import Head from 'next/head';
 
 export default function Cortes() {
   const cortes = [
@@ -43,6 +44,10 @@ export default function Cortes() {
 
   return (
     <>
+      <Head>
+        <title>Cortes a Medida | Luisi Decoraciones</title>
+        <meta name="description" content="Descubre nuestros cortes a medida en diferentes tipos de madera como chapadur, terciado, fibrofacil y más. Calidad garantizada." />
+      </Head>
       <Navbar />
       <div className="bg-white py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

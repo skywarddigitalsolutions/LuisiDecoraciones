@@ -10,7 +10,7 @@ const productos = [
 
     {
         id: 1,
-        categoria: '',
+        categoria: 'Habitación',
         titulo: 'Mesa de luz con un cajón',
         descripcion: 'Mesa elegante hecha de Madera de pino natural, perfecta para un estilo clásico y funcional en cualquier dormitorio.',
         caracteristicas: [
@@ -21,9 +21,9 @@ const productos = [
     },
     {
         id: 2,
-        categoria: '',
+        categoria: 'Habitación',
         titulo: 'Mesa de luz con cajón escandinavo',
-        descripcion: 'Estantería moderna hecha de Madera de pino.',
+        descripcion: 'Mesa de luz moderna de diseño escandinavo, fabricada en madera de pino. Perfecta para espacios con estilo minimalista',
         caracteristicas: [
             { icono: <FaRuler className="w-8 h-8 text-marron" />, texto: '0,60 x 0,41 x 0,30 m' },
             { icono: <GiWoodBeam className="w-8 h-8 text-marron" />, texto: 'Madera de pino' },
@@ -35,7 +35,7 @@ const productos = [
         id: 3,
         categoria: '',
         titulo: 'Mesa de luz con puerta',
-        descripcion: 'Mesa elegante hecha de Madera de pino natural.',
+        descripcion: 'Mesa funcional de estilo escandinavo, elaborada en madera de pino, ideal para complementar cualquier dormitorio',
         caracteristicas: [
             { icono: <FaRuler className="w-8 h-8 text-marron" />, texto: '0,57 x 0,40 x 0,24 m' },
             { icono: <GiWoodBeam className="w-8 h-8 text-marron" />, texto: 'Madera de pino' },
@@ -46,7 +46,7 @@ const productos = [
         id: 4,
         categoria: '',
         titulo: 'Bodega estilo barril',
-        descripcion: 'Estantería moderna hecha de Madera de pino.',
+        descripcion: ' Es para almacenar 5 botelas, esta bodega es perfecta para almacenarlas de manera elegante y organizada',
         caracteristicas: [
             { icono: <FaRuler className="w-8 h-8 text-marron" />, texto: '0,55 x 0,36 x 0,22 m' },
             { icono: <GiWoodBeam className="w-8 h-8 text-marron" />, texto: 'Madera de pino' },
@@ -55,9 +55,9 @@ const productos = [
     },
     {
         id: 5,
-        categoria: '',
+        categoria: ['Living', 'Baño', 'Cocina', 'Habitación'],
         titulo: 'Ordenador con 3 canastos de plástico',
-        descripcion: 'Mesa elegante hecha de Madera de pino natural.',
+        descripcion: 'Incluye tres canastos de plástico blanco, ideal para mantener el orden y la organización en cualquier espacio',
         caracteristicas: [
             { icono: <FaRuler className="w-8 h-8 text-marron" />, texto: ' 0,49 x 0,31 x 0,79 m' },
             { icono: <GiWoodBeam className="w-8 h-8 text-marron" />, texto: 'Madera de pino' },
@@ -66,9 +66,9 @@ const productos = [
     },
     {
         id: 6,
-        categoria: '',
-        titulo: 'Vanitori con 2 estantes y 1 cajón',
-        descripcion: 'Estantería moderna hecha de Madera de pino.',
+        categoria: 'Baño',
+        titulo: 'Vanitori',
+        descripcion: 'Mueble práctico con un diseño elegante que cuenta con dos estantes y un cajón, perfecto para optimizar el espacio y mantener todo al alcance en el baño',
         caracteristicas: [
             { icono: <FaRuler className="w-8 h-8 text-marron" />, texto: ' 0,83 x 0,40 x 0,34 m' },
             { icono: <GiWoodBeam className="w-8 h-8 text-marron" />, texto: 'Madera de pino' },
@@ -77,9 +77,9 @@ const productos = [
     },
     {
         id: 7,
-        categoria: '',
+        categoria: ["Cocina", "Living", "Baño"],
         titulo: 'Despensero con 2 puertas',
-        descripcion: 'Mesa elegante hecha de Madera de pino natural.',
+        descripcion: 'Mueble funcional con dos puertas, cada una equipada con dos estantes, además de dos cajones. Ideal para organizar y almacenar alimentos y utensilios en la cocina.',
         caracteristicas: [
             { icono: <FaRuler className="w-8 h-8 text-marron" />, texto: '1,72 x 0,40 x 0,40 m' },
             { icono: <GiWoodBeam className="w-8 h-8 text-marron" />, texto: 'Madera de pino' },
@@ -110,7 +110,7 @@ const productos = [
     },
     {
         id: 10,
-        categoria: '',
+        categoria: 'Baño',
         titulo: 'Estanteria con 5 estantes',
         descripcion: 'Estantería moderna hecha de Madera de pino.',
         caracteristicas: [
@@ -406,7 +406,7 @@ export default function Productos() {
     };
 
     const productosFiltrados = productos.filter(producto =>
-        filtro === 'Todos' || producto.categoria === filtro
+        filtro === 'Todos' || producto.categoria.includes(filtro)
     );
 
     return (
@@ -420,11 +420,17 @@ export default function Productos() {
                 <button onClick={() => handleFiltroChange('Todos')} className={`px-4 py-2 mx-2 rounded-md ${filtro === 'Todos' ? 'bg-marron text-beige' : 'bg-beige text-marron'}`}>
                     Todos
                 </button>
-                <button onClick={() => handleFiltroChange('Madera')} className={`px-4 py-2 mx-2 rounded-md ${filtro === 'Madera' ? 'bg-marron text-beige' : 'bg-beige text-marron'}`}>
-                    Madera
+                <button onClick={() => handleFiltroChange('Living')} className={`px-4 py-2 mx-2 rounded-md ${filtro === 'Living' ? 'bg-marron text-beige' : 'bg-beige text-marron'}`}>
+                    Living
                 </button>
-                <button onClick={() => handleFiltroChange('Madera de pino')} className={`px-4 py-2 mx-2 rounded-md ${filtro === 'Madera de pino' ? 'bg-marron text-beige' : 'bg-beige text-marron'}`}>
-                    Madera de pino
+                <button onClick={() => handleFiltroChange('Habitación')} className={`px-4 py-2 mx-2 rounded-md ${filtro === 'Habitación' ? 'bg-marron text-beige' : 'bg-beige text-marron'}`}>
+                    Habitación
+                </button>
+                <button onClick={() => handleFiltroChange('Cocina')} className={`px-4 py-2 mx-2 rounded-md ${filtro === 'Cocina' ? 'bg-marron text-beige' : 'bg-beige text-marron'}`}>
+                    Cocina
+                </button>
+                <button onClick={() => handleFiltroChange('Baño')} className={`px-4 py-2 mx-2 rounded-md ${filtro === 'Baño' ? 'bg-marron text-beige' : 'bg-beige text-marron'}`}>
+                    Baño
                 </button>
             </div>
 
@@ -443,7 +449,7 @@ export default function Productos() {
                             ))}
                         </div>
                         <a
-                            href={`https://wa.me/541151742249?text=${encodeURIComponent(`Hola, estoy interesado en el producto: ${producto.titulo}`)}`}
+                            href={`https://wa.me/+541151742249?text=${encodeURIComponent(`Hola, estoy interesado en el producto: ${producto.titulo}`)}`}
                             className="bg-marron text-beige font-semibold py-3 px-6 rounded-md hover:bg-beige hover:text-marron transition-colors"
                             target="_blank" 
                             rel="noopener noreferrer" 

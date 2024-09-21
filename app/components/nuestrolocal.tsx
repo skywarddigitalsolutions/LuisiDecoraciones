@@ -21,6 +21,15 @@ export default function NuestroLocal() {
         arrows: true,
     };
 
+    const images = [
+        { src: Local1, alt: "Foto del local 1" },
+        { src: Local2, alt: "Foto del local 2" },
+        { src: Local3, alt: "Foto del local 3" },
+        { src: Local4, alt: "Foto del local 4" },
+        { src: Local5, alt: "Foto del local 5" },
+        { src: Local6, alt: "Foto del local 6" },
+    ];
+
     return (
         <div className="bg-crema min-h-[80vh] py-12 px-6">
             <h2 className="text-marron text-4xl md:text-5xl font-bold text-center mb-8">Nuestro local</h2>
@@ -28,111 +37,32 @@ export default function NuestroLocal() {
             {/* Carrusel en móviles */}
             <div className="block lg:hidden pt-12">
                 <Slider {...settings}>
-                    <div className="relative w-full h-96">
-                        <Image 
-                            src={Local1} 
-                            alt="Foto del local 1" 
-                            layout="fill" 
-                            className="object-cover rounded-lg" 
-                        />
-                    </div>
-                    <div className="relative w-full h-96">
-                        <Image 
-                            src={Local2} 
-                            alt="Foto del local 2" 
-                            layout="fill" 
-                            className="object-cover rounded-lg" 
-                        />
-                    </div>
-                    <div className="relative w-full h-96">
-                        <Image 
-                            src={Local3} 
-                            alt="Foto del local 3" 
-                            layout="fill" 
-                            className="object-cover rounded-lg" 
-                        />
-                    </div>
-                    <div className="relative w-full h-96">
-                        <Image 
-                            src={Local4} 
-                            alt="Foto del local 4" 
-                            layout="fill" 
-                            className="object-cover rounded-lg" 
-                        />
-                    </div>
-                    <div className="relative w-full h-96">
-                        <Image 
-                            src={Local5} 
-                            alt="Foto del local 5" 
-                            layout="fill" 
-                            className="object-cover rounded-lg" 
-                        />
-                    </div>
-                    <div className="relative w-full h-96">
-                        <Image 
-                            src={Local6} 
-                            alt="Foto del local 6" 
-                            layout="fill" 
-                            className="object-cover rounded-lg" 
-                        />
-                    </div>
-                    {/* Añade más imágenes aquí */}
+                    {images.map((image, index) => (
+                        <div key={index} className="relative w-full h-96">
+                            <Image 
+                                src={image.src} 
+                                alt={image.alt} 
+                                layout="fill" 
+                                className="object-cover rounded-lg" 
+                            />
+                        </div>
+                    ))}
                 </Slider>
             </div>
 
             {/* Grid en pantallas grandes */}
             <div className="hidden lg:grid lg:grid-cols-2 xl:grid-cols-3 gap-4">
-                <div className="relative w-full h-96">
-                    <Image 
-                        src={Local1} 
-                        alt="Foto del local 1" 
-                        layout="fill" 
-                        className="object-cover rounded-lg" 
-                    />
-                </div>
-                <div className="relative w-full h-96">
-                    <Image 
-                        src={Local2} 
-                        alt="Foto del local 2" 
-                        layout="fill" 
-                        className="object-cover rounded-lg" 
-                    />
-                </div>
-                <div className="relative w-full h-96">
-                    <Image 
-                        src={Local3} 
-                        alt="Foto del local 3" 
-                        layout="fill" 
-                        className="object-cover rounded-lg" 
-                    />
-                </div>
-                <div className="relative w-full h-96">
-                    <Image 
-                        src={Local4} 
-                        alt="Foto del local 4" 
-                        layout="fill" 
-                        className="object-cover rounded-lg" 
-                    />
-                </div>
-                <div className="relative w-full h-96">
+                {images.map((image, index) => (
+                    <div key={index} className="relative w-full h-96">
                         <Image 
-                            src={Local5} 
-                            alt="Foto del local 5" 
+                            src={image.src} 
+                            alt={image.alt} 
                             layout="fill" 
                             className="object-cover rounded-lg" 
                         />
                     </div>
-                    <div className="relative w-full h-96">
-                        <Image 
-                            src={Local6} 
-                            alt="Foto del local 6" 
-                            layout="fill" 
-                            className="object-cover rounded-lg" 
-                        />
-                    </div>
-                {/* Añade más imágenes aquí */}
+                ))}
             </div>
-            
         </div>
     );
 }

@@ -29,7 +29,7 @@ export default function Contacto() {
                         </div>
                         <div className="flex items-center mb-4">
                             <FaPhoneAlt className="text-2xl text-marron mr-4" />
-                            <p>+54 11 1234-5678</p> {/* Reemplaza con el número real */}
+                            <p>+541151742249</p> {/* Reemplaza con el número real */}
                         </div>
                         <div className="flex items-center mb-4">
                             <FaInstagram className="text-2xl text-marron mr-4" />

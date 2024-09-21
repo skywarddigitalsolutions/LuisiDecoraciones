@@ -11,7 +11,7 @@ import NuestroLocal from "./components/nuestrolocal";
 import Footer from "./components/footer";
 import Loader from "./components/loader";
 import { useEffect,useState } from "react";
-
+import Head from "next/head";
 
 export default function Home() {
   const [loaded, setLoaded] = useState(false);
@@ -27,14 +27,19 @@ export default function Home() {
       {!loaded && <Loader />}
       {loaded && (
         <div>
-      <Navbar />
-      <Hero/>
-      <ServiciosHero/>
-      <NosotrosHero />
-      <ProductosHero/>
-      <NuestroLocal />
-      <Cotizar/>
-      <Footer/>
+           <Head>
+                <title>Luisi Decoraciones - Cortes a Medida</title>
+                <meta name="description" content="Muebles personalizados a medida para tu hogar. Contáctanos para cotizar tu mueble." />
+                <meta name="keywords" content="muebles, madera, personalizados, cotización, diseño, corte, cortes, cortes a medida, a medida, personalización de muebles, madera de pino" />
+            </Head>
+          <Navbar />
+          <Hero/>
+          <ServiciosHero/>
+          <NosotrosHero />
+          <ProductosHero/>
+          <NuestroLocal />
+          <Cotizar/>
+          <Footer/>
       </div>
        )}
 

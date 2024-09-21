@@ -2,10 +2,17 @@ import Footer from "@/app/components/footer";
 import Navbar from "@/app/components/navbar";
 import Link from "next/link";
 import { HiClipboardList, HiPencilAlt, HiAdjustments } from "react-icons/hi";
-
+import Head from "next/head";
 export default function Muebles() {
   return (
     <>
+      <Head>
+        <title>Muebles a Medida | Luisi Decoraciones</title>
+        <meta name="description" content="En Luisi Decoraciones creamos muebles a medida con precisión, asesoramiento personalizado y flexibilidad para cualquier proyecto." />
+        <meta name="keywords" content="muebles a medida, carpintería, cortes a medida, muebles personalizados, Luisi Decoraciones" />
+        <meta name="author" content="Luisi Decoraciones" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
       <Navbar />
       <div className="bg-crema pt-32 pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
