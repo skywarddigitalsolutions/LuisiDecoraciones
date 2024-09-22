@@ -236,9 +236,9 @@ export const productos = [
     },
     {
         id: 22,
-        categoria: '',
+        categoria: ["Living"],
         titulo: 'Mesa ratona',
-        descripcion: 'Mesa elegante hecha de Madera de pino natural.',
+        descripcion: 'Plegable y práctica, con porta botellas o termos. Ideal para reuniones, añade estilo y funcionalidad a cualquier espacio.',
         caracteristicas: [
             { icono: <FaRuler className="w-8 h-8 text-marron" />, texto: '0,42 x 0,69 x 0,45 m' },
             { icono: <GiWoodBeam className="w-8 h-8 text-marron" />, texto: 'Madera de pino' },
@@ -247,9 +247,9 @@ export const productos = [
     },
     {
         id: 23,
-        categoria: '',
+        categoria: ["Cocina", "Baño"],
         titulo: 'Verdulero con canastos',
-        descripcion: 'Estantería moderna hecha de Madera de pino.',
+        descripcion: 'Combinación de madera de pino y plástico negro, con 3 canastos. Perfecto para organizar frutas, verduras y otros elementos en cualquier espacio.',
         caracteristicas: [
             { icono: <FaRuler className="w-8 h-8 text-marron" />, texto: '1,20 x 0,60 x 0,36 m' },
             { icono: <GiWoodBeam className="w-8 h-8 text-marron" />, texto: 'Madera de pino' },
@@ -258,9 +258,9 @@ export const productos = [
     },
     {
         id: 24,
-        categoria: '',
+        categoria: ["Living", "Cocina"],
         titulo: 'Mesita porta mate',
-        descripcion: 'Mesa elegante hecha de Madera de pino natural.',
+        descripcion: 'Ideal para jardines, camping o clubes, permite tener todo el equipo de mate al alcance de la mano.',
         caracteristicas: [
             { icono: <FaRuler className="w-8 h-8 text-marron" />, texto: '0,36 x 0,60 x 0,40 m' },
             { icono: <GiWoodBeam className="w-8 h-8 text-marron" />, texto: 'Madera de pino' },
@@ -269,9 +269,9 @@ export const productos = [
     },
     {
         id: 25,
-        categoria: '',
+        categoria: ["Cocina"],
         titulo: 'Tabla picada',
-        descripcion: 'Estantería moderna hecha de Madera de pino.',
+        descripcion: '',
         caracteristicas: [
             { icono: <FaRuler className="w-8 h-8 text-marron" />, texto: '' },
             { icono: <GiWoodBeam className="w-8 h-8 text-marron" />, texto: 'Madera de pino' },
@@ -280,9 +280,9 @@ export const productos = [
     },
     {
         id: 26,
-        categoria: '',
+        categoria: ["Living", "Cocina", "Baño", "Habitación"],
         titulo: 'Canasto de plástico',
-        descripcion: 'Mesa elegante hecha de Madera de pino natural.',
+        descripcion: 'Puede ser blanco o negro, con resistente armazón de madera de pino. Perfecto para organizar con estilo',
         caracteristicas: [
             { icono: <FaRuler className="w-8 h-8 text-marron" />, texto: '0,20 x 0,40 x 0,28 m' },
             { icono: <GiWoodBeam className="w-8 h-8 text-marron" />, texto: 'Madera de pino' },
@@ -291,9 +291,9 @@ export const productos = [
     },
     {
         id: 27,
-        categoria: '',
+        categoria: ["Habitación", "Living"],
         titulo: 'Juego de mesa y silla para niños',
-        descripcion: 'Estantería moderna hecha de Madera de pino.',
+        descripcion: 'Diseñado especialmente para niños, ideal para actividades creativas y momentos de juego. Perfecto para cualquier espacio.',
         caracteristicas: [
             { icono: <FaRuler className="w-8 h-8 text-marron" />, texto: '' },
             { icono: <GiWoodBeam className="w-8 h-8 text-marron" />, texto: 'Madera de pino' },
@@ -302,9 +302,9 @@ export const productos = [
     },
     {
         id: 28,
-        categoria: '',
+        categoria: ["Habitación"],
         titulo: 'Porta bebe',
-        descripcion: 'Mesa elegante hecha de Madera de pino natural.',
+        descripcion: 'Ideal para transportar a tu bebé con estilo y comodidad. Perfecto para paseos y juegos',
         caracteristicas: [
             { icono: <FaRuler className="w-8 h-8 text-marron" />, texto: '' },
             { icono: <GiWoodBeam className="w-8 h-8 text-marron" />, texto: 'Madera de pino' },
@@ -313,9 +313,9 @@ export const productos = [
     },
     {
         id: 29,
-        categoria: '',
+        categoria: ["Living", "Habitación"],
         titulo: 'Divisor de ambientes',
-        descripcion: 'Estantería moderna hecha de Madera de pino.',
+        descripcion: 'En varillas de madera de pino, ideal para crear espacios acogedores y definidos según tus necesidades.',
         caracteristicas: [
             { icono: <FaRuler className="w-8 h-8 text-marron" />, texto: 'A pedido' },
             { icono: <GiWoodBeam className="w-8 h-8 text-marron" />, texto: 'Madera de pino' },
@@ -324,9 +324,9 @@ export const productos = [
     },
     {
         id: 30,
-        categoria: '',
+        categoria: ["Living", "Habitación"],
         titulo: 'Juego de Ta Te Ti',
-        descripcion: 'Mesa elegante hecha de Madera de pino natural.',
+        descripcion: 'Ideal para disfrutar en familia o con amigos. Fomenta la diversión y la estrategia en cada partida.',
         caracteristicas: [
             { icono: <FaRuler className="w-8 h-8 text-marron" />, texto: '0,24 x 0,24 x 0,015 m' },
             { icono: <GiWoodBeam className="w-8 h-8 text-marron" />, texto: 'Madera de pino' },
@@ -335,9 +335,9 @@ export const productos = [
     },
     {
         id: 31,
-        categoria: '',
+        categoria: ["Living", "Habitación"],
         titulo: 'Recibidor 8 percheros',
-        descripcion: 'Estantería moderna hecha de Madera de pino.',
+        descripcion: 'Con 8 percheros y 3 estantes para una organización práctica y estética. Perfecto para entradas y pasillos',
         caracteristicas: [
             { icono: <FaRuler className="w-8 h-8 text-marron" />, texto: '1,82 x 0,80 x 0,32 m' },
             { icono: <GiWoodBeam className="w-8 h-8 text-marron" />, texto: 'Madera de pino' },
@@ -346,9 +346,9 @@ export const productos = [
     },
     {
         id: 32,
-        categoria: '',
+        categoria: 'Cocina',
         titulo: 'Mesa quesera',
-        descripcion: 'Mesa elegante hecha de Madera de pino natural.',
+        descripcion: 'Con cuatro cajones y un estante inferior, diseñada para facilitar el almacenamiento y la presentación de quesos. Ideal para cualquier amante de la gastronomía',
         caracteristicas: [
             { icono: <FaRuler className="w-8 h-8 text-marron" />, texto: '1 x 0,40 x 0,80 m' },
             { icono: <GiWoodBeam className="w-8 h-8 text-marron" />, texto: 'Madera de pino' },
@@ -357,9 +357,9 @@ export const productos = [
     },
     {
         id: 33,
-        categoria: '',
+        categoria: ["Living", "Habitación"],
         titulo: 'Perchero plegable',
-        descripcion: 'Estantería moderna hecha de Madera de pino.',
+        descripcion: 'Tiene un barral de madera y dos estantes desmontables, ideal para optimizar espacios y mantener el orden. Perfecto para cualquier habitación',
         caracteristicas: [
             { icono: <FaRuler className="w-8 h-8 text-marron" />, texto: '1,80 x 0,80 x 0,40 m' },
             { icono: <GiWoodBeam className="w-8 h-8 text-marron" />, texto: 'Madera de pino' },
@@ -368,9 +368,9 @@ export const productos = [
     },
     {
         id: 34,
-        categoria: '',
+        categoria: ["Living", "Habitación"],
         titulo: 'Perchero para pared escandinavo',
-        descripcion: 'Mesa elegante hecha de Madera de pino natural.',
+        descripcion: 'Tiene 12 perchas, ideal para organizar abrigos y accesorios. Disponible en medidas personalizadas para adaptarse a tu espacio.',
         caracteristicas: [
             { icono: <FaRuler className="w-8 h-8 text-marron" />, texto: '1,80 x 0,60 m' },
             { icono: <GiWoodBeam className="w-8 h-8 text-marron" />, texto: 'Madera de pino' },
@@ -379,9 +379,9 @@ export const productos = [
     },
     {
         id: 35,
-        categoria: '',
+        categoria: ["Living", "Habitación"],
         titulo: 'Baules',
-        descripcion: 'Mesa elegante hecha de Madera de pino natural.',
+        descripcion: 'Puede ser en varias medidas, perfecto para almacenar y organizar tus pertenencias. Diseñado para combinar funcionalidad y estilo en cualquier espacio',
         caracteristicas: [
             { icono: <FaRuler className="w-8 h-8 text-marron" />, texto: 'Distintas medidas' },
             { icono: <GiWoodBeam className="w-8 h-8 text-marron" />, texto: 'Madera de pino' },

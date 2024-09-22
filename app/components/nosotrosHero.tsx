@@ -23,7 +23,7 @@ export default function NosotrosHero() {
                 </div>
 
                 <div className="lg:text-left lg:w-1/2">
-                    <p className="text-gray-700 text-center text-lg lg:text-xl">
+                    <p className="text-gray-700 text-center text-lg lg:text-xl lg:text-left">
                         Desde 1936, Luisi Decoraciones ha sido un pilar en el barrio de Monte Castro. Fundada por Luis Luisi, nuestra carpintería comenzó vendiendo materiales usados para la construcción y ha evolucionado hasta convertirse en un referente en cortes de madera a medida y muebles personalizados. Con más de 80 años de experiencia, seguimos comprometidos con la calidad, la dedicación y la atención personalizada, manteniendo vivo el legado de nuestro fundador.
                     </p>
                     

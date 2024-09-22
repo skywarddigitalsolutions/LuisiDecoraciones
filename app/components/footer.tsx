@@ -70,9 +70,9 @@ export default function Footer() {
             </a>
           </div>
           <div className="flex ">
-            <FaMapMarkerAlt className="text-2xl text-red-500 mr-4" />
+            <FaMapMarkerAlt className="text-2xl text-crema mr-4" />
             <p className="text-sm lg:text-base">
-              Lascano 5277, Monte Castro, Buenos Aires, Argentina
+              Lascano 5277 - Monte Castro
             </p>
           </div>
         </div>

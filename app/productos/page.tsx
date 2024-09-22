@@ -5,6 +5,7 @@ import Footer from "../components/footer";
 import { productos } from "./products";
 import Image from "next/image";
 import { FiltroBoton } from "../components/FiltroBoton";
+import Head from "next/head";
 
 export default function Productos() {
   const [filtro, setFiltro] = useState("Todos");
@@ -24,6 +25,13 @@ export default function Productos() {
 
   return (
     <>
+      <Head>
+        <title>Productos de Carpintería | Luisi Decoraciones</title>
+        <meta 
+          name="description" 
+          content="Descubre una amplia variedad de productos de carpintería de alta calidad en Luisi Decoraciones. Ofrecemos cortes a medida, maderas, muebles personalizados y mucho más en Monte Castro." 
+        />
+      </Head>
       <Navbar />
       <div className="bg-crema min-h-screen py-32 px-6">
         <h2 className="text-marron text-4xl md:text-5xl font-bold text-center mb-6">
