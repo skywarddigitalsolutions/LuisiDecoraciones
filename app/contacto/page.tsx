@@ -7,7 +7,7 @@ export default function Contacto() {
     return (
         <>
             <Navbar />
-            <div className="relative my-12 bg-crema py-20 px-4 lg:px-10">
+            <div className="relative mt-12 bg-crema py-20 px-4 lg:px-10">
                 
                 {/* Título de la sección */}
                 <div className="text-center mb-12 flex flex-col justify-center items-center">
@@ -25,21 +25,21 @@ export default function Contacto() {
                         <h3 className="text-2xl font-semibold text-marron mb-12">Información de Contacto</h3>
                         <div className="flex items-center mb-4">
                             <FaMapMarkerAlt className="text-2xl text-marron mr-4" />
-                            <p>Lascano 5277, Monte Castro, Buenos Aires, Argentina</p>
+                            <p className="text-base text-marron">Lascano 5277, Monte Castro, Buenos Aires, Argentina</p>
                         </div>
                         <div className="flex items-center mb-4">
                             <FaPhoneAlt className="text-2xl text-marron mr-4" />
-                            <p>+541151742249</p> {/* Reemplaza con el número real */}
+                            <a href="https://wa.me/+541151742249" target="_blank" className="text-base text-marron">+541151742249</a>
                         </div>
                         <div className="flex items-center mb-4">
                             <FaInstagram className="text-2xl text-marron mr-4" />
-                            <a href="https://instagram.com/luisidecoraciones" target="_blank" rel="noopener noreferrer" className="hover:text-verdeoscuro">
+                            <a href="https://instagram.com/luisidecoraciones" target="_blank" rel="noopener noreferrer" className="hover:text-verdeoscuro text-base text-marron">
                                 @luisidecoraciones
                             </a>
                         </div>
                         <div className="flex items-center">
                             <FaFacebook className="text-2xl text-marron mr-4" />
-                            <a href="https://facebook.com/luisidecoraciones" target="_blank" rel="noopener noreferrer" className="hover:text-verdeoscuro">
+                            <a href="https://facebook.com/luisidecoraciones" target="_blank" rel="noopener noreferrer" className="hover:text-verdeoscuro text-base text-marron">
                                 Luisi Decoraciones
                             </a>
                         </div>

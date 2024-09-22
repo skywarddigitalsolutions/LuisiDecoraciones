@@ -8,7 +8,8 @@ export default function NosotrosHero() {
         <div className="bg-crema min-h-screen py-12 px-6 relative">
             <h2 className="text-marron text-4xl md:text-5xl font-bold text-center mb-12">Nuestra historia</h2>
 
-            <div className="relative flex flex-col lg:flex-row  lg:justify-between gap-6 lg:gap-12  lg:px-12">
+            <div className="relative flex flex-col items-center xl:items-start lg:flex-row lg:justify-between gap-6 lg:gap-12 lg:px-12">
+
                 <div className="relative w-full max-w-md lg:max-w-xl flex-shrink-0 lg:w-1/2">
                     {/* Cuadrado marrón en el fondo */}
                     <div className="absolute inset-0 bg-marron rounded-2xl lg:rounded-lg -z-10"></div>
@@ -20,12 +21,13 @@ export default function NosotrosHero() {
                         className="object-cover w-full h-full rounded-2xl lg:rounded-lg"
                     />
                 </div>
-                <div className="max-w-lg lg:max-w-full text-center lg:text-left lg:flex-1">
-                    <p className="text-gray-700 text-lg lg:text-xl">
+
+                <div className="lg:text-left lg:w-1/2">
+                    <p className="text-gray-700 text-center text-lg lg:text-xl">
                         Desde 1936, Luisi Decoraciones ha sido un pilar en el barrio de Monte Castro. Fundada por Luis Luisi, nuestra carpintería comenzó vendiendo materiales usados para la construcción y ha evolucionado hasta convertirse en un referente en cortes de madera a medida y muebles personalizados. Con más de 80 años de experiencia, seguimos comprometidos con la calidad, la dedicación y la atención personalizada, manteniendo vivo el legado de nuestro fundador.
                     </p>
                     
-                    <div className="flex flex-col lg:flex-row gap-8 lg:gap-36 mt-16 lg:mt-20 lg:px-12 lg:justify-center">
+                    <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 mt-16 lg:px-12 items-center lg:justify-center">
                         <div className="flex lg:flex-col items-center">
                             <div className="text-marron p-4 lg:p-2 rounded-full flex items-center justify-center">
                                 <CheckBadgeIcon className="w-8 h-8 lg:w-12 lg:h-12" />
