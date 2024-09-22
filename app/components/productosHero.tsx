@@ -96,7 +96,7 @@ export default function ProductosHero() {
                         disableOnInteraction: false,
                     }}
                     modules={[EffectCoverflow, Pagination, Autoplay]}
-                    className="w-full max-w-4xl mx-auto"
+                    className="w-full max-w-7xl mx-auto"
                 >
                     {productos.map((producto) => (
                         <SwiperSlide key={producto.id} className="bg-white p-6 rounded-lg shadow-lg">
@@ -105,7 +105,7 @@ export default function ProductosHero() {
                                 alt={producto.nombre}
                                 width={500}
                                 height={500}
-                                className="w-full h-96 object-cover rounded-lg"
+                                className="w-full h-auto object-cover rounded-lg"
                             />
                             <div className="mt-4 text-center">
                                 <h3 className="text-2xl font-semibold text-marron">{producto.nombre}</h3>
