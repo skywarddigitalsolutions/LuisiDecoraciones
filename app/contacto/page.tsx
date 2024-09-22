@@ -2,10 +2,18 @@
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 import { FaPhoneAlt, FaMapMarkerAlt, FaInstagram, FaFacebook } from "react-icons/fa";
-
+import Head from "next/head";
 export default function Contacto() {
     return (
         <>
+             <Head>
+                <title>Contáctanos | Luisi Decoraciones</title>
+                <meta 
+                    name="description" 
+                    content="Ponte en contacto con Luisi Decoraciones para consultas sobre restauración de muebles, pedidos y más. Estamos ubicados en Monte Castro, Buenos Aires." 
+                />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+            </Head>
             <Navbar />
             <div className="relative mt-12 bg-crema py-20 px-4 lg:px-10">
                 
@@ -48,7 +56,7 @@ export default function Contacto() {
                     {/* Imagen del local */}
                     <div className="lg:w-1/2">
                         <img
-                            src="./fondo.jpg"  // Reemplaza con la ruta correcta de la imagen del local
+                            src="./fondo.webp" 
                             alt="Imagen del Local de Luisi Decoraciones"
                             className="w-full h-full object-cover rounded-lg"
                         />
