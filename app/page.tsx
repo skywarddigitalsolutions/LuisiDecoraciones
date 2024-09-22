@@ -28,11 +28,11 @@ export default function Home() {
       {!loaded && <Loader />}
       {loaded && (
         <div>
-           <Head>
+          <Head>
                 <title>Luisi Decoraciones - Cortes a Medida</title>
                 <meta name="description" content="Muebles personalizados a medida para tu hogar. Contáctanos para cotizar tu mueble." />
                 <meta name="keywords" content="muebles, madera, personalizados, cotización, diseño, corte, cortes, cortes a medida, a medida, personalización de muebles, madera de pino" />
-            </Head>
+          </Head>
           <Navbar />
           <Hero/>
           <ServiciosHero/>
