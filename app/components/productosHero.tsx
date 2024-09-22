@@ -3,7 +3,7 @@ import Producto from '../../public/producto.jpg';
 
 export default function ProductosHero() {
     return (
-        <div className="bg-gris min-h-screen py-12 px-6">
+        <div className="bg-gris min-h-screen lg:min-h-[70vh] py-12 px-6">
             <h2 className="text-crema text-4xl md:text-5xl font-bold text-center mb-6">Productos</h2>
             <p className="text-crema text-lg text-center mb-12">¿Qué estás buscando?</p>
 

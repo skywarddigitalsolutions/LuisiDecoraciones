@@ -5,6 +5,7 @@ import Footer from "../components/footer";
 import { productos } from "./products";
 import Image from "next/image";
 import { FiltroBoton } from "../components/FiltroBoton";
+import BtnScrollTop from "../components/BtnScrollTop";
 
 export default function Productos() {
   const [filtro, setFiltro] = useState("Todos");
@@ -20,7 +21,7 @@ export default function Productos() {
       producto.categoria.includes(filtro)
   );
 
-  const filtros = ['Todos', 'Living', 'Habitación', 'Cocina', 'Baño'];
+  const filtros = ["Todos", "Living", "Habitación", "Cocina", "Baño"];
 
   return (
     <>
@@ -33,8 +34,8 @@ export default function Productos() {
           Explora nuestra selección de productos de alta calidad.
         </p>
 
-        <div className="flex flex-wrap justify-center items-start md:items-center gap-4 mb-6">          
-            {filtros.map((f) => (
+        <div className="flex flex-wrap justify-center items-start md:items-center gap-4 mb-6">
+          {filtros.map((f) => (
             <FiltroBoton
               key={f}
               label={f}
@@ -48,7 +49,7 @@ export default function Productos() {
           {productosFiltrados.map((producto) => (
             <div
               key={producto.id}
-              className="bg-white p-6 rounded-2xl shadow-lg"
+              className="bg-white p-6 rounded-2xl shadow-lg flex flex-col h-full"
             >
               <Image
                 src={producto.imagen}
@@ -60,12 +61,17 @@ export default function Productos() {
               <h3 className="text-marron text-2xl font-bold mb-2">
                 {producto.titulo}
               </h3>
-              <p className="text-marron/70 mb-4">{producto.descripcion}</p>
-              <div className="text-marron mb-6 grid grid-cols-2 gap-4">
+              <p className="text-marron/70 mb-4 flex-grow">
+                {producto.descripcion}
+              </p>
+              <div className="text-marron mb-8 grid grid-cols-4 gap-4">
                 {producto.caracteristicas.map((caracteristica, index) => (
-                  <div key={index} className="flex flex-col mt-2">
+                  <div
+                    key={Number(index)}
+                    className="flex flex-col items-center"
+                  >
                     {caracteristica.icono}
-                    <p className="mt-2">{caracteristica.texto}</p>
+                    <p className="mt-2 text-center">{caracteristica.texto}</p>
                   </div>
                 ))}
               </div>
@@ -73,7 +79,7 @@ export default function Productos() {
                 href={`https://wa.me/+541151742249?text=${encodeURIComponent(
                   `Hola, estoy interesado en el producto: ${producto.titulo}`
                 )}`}
-                className="bg-marron text-beige font-semibold py-3 px-6 rounded-md hover:bg-beige hover:text-marron transition-colors"
+                className="bg-marron text-beige text-center font-semibold py-3 px-6 rounded-md hover:bg-beige hover:text-marron transition-colors lg:w-40 "
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -83,6 +89,7 @@ export default function Productos() {
           ))}
         </div>
       </div>
+      <BtnScrollTop />
       <Footer />
     </>
   );

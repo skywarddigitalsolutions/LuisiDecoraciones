@@ -13,7 +13,7 @@ export default function Nosotros() {
                 />                
             </Head>
             <Navbar />
-            <div className="relative my-12 bg-crema py-20 px-4 lg:px-10">
+            <div className="relative mt-12 bg-crema py-20 px-4 lg:px-10">
                 
                 {/* Título de la sección */}
                 <div className="text-center mb-12 flex flex-col justify-center items-center">
@@ -29,7 +29,7 @@ export default function Nosotros() {
                     <div className="relative lg:w-1/2">
                         <div className="bg-marron rounded-2xl p-4 flex items-center justify-center h-full">
                             <img
-                                src="./fondo.webp"  // Asegúrate de usar la ruta correcta para la imagen
+                                src="./fondo.webp" 
                                 alt="Foto del fundador de Luisi Decoraciones"
                                 className="w-full h-full object-cover rounded-2xl"
                             />

@@ -1,6 +1,8 @@
 "use client"
 
-import Image from "next/image";
+import { useEffect,useState } from "react";
+import Head from "next/head";
+
 import Navbar from "./components/navbar";
 import Hero from "./components/hero";
 import ServiciosHero from "./components/serviciosHero";
@@ -10,8 +12,6 @@ import Cotizar from "./components/cotizar";
 import NuestroLocal from "./components/nuestrolocal";
 import Footer from "./components/footer";
 import Loader from "./components/loader";
-import { useEffect,useState } from "react";
-import Head from "next/head";
 
 export default function Home() {
   const [loaded, setLoaded] = useState(false);
@@ -21,6 +21,7 @@ export default function Home() {
       setLoaded(true);
     }, 1100);
   }, []);
+  
   return (
     <>
      {" "}
@@ -42,7 +43,6 @@ export default function Home() {
           <Footer/>
       </div>
        )}
-
     </>
   );
 }

@@ -5,7 +5,7 @@ import "./hero.css";
 
 export default function Hero() {
     return (
-        <div className="h-[90vh] lg:min-h-screen relative flex flex-col justify-center items-center lg:pl-16">
+        <div className="h-[100vh] lg:min-h-screen relative flex flex-col justify-center items-center lg:pl-16">
            
             <div className="absolute inset-0 bg-black">
                 <Image

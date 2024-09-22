@@ -39,7 +39,7 @@ export default function Muebles() {
             </button>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">¿Cómo Funciona?</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-6 text-center">¿Cómo Funciona?</h3>
             <div className="flex flex-col md:flex-row justify-between items-start gap-8 mb-20">
               <div className="bg-white p-6 rounded-lg shadow-lg flex-1 min-w-[280px]">
                 <div className="flex mb-4">
@@ -82,7 +82,7 @@ export default function Muebles() {
               </div>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mt-12 mb-6">Ventajas de Nuestro Servicio</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mt-12 mb-6 text-center">Ventajas de Nuestro Servicio</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center">
                 <HiClipboardList className="w-12 h-12 text-marron mb-4" />
