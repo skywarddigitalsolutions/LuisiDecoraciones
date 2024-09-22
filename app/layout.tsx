@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import BotonWhatsApp from "./components/BotonWhatsApp";
 
 const montserrrat = Montserrat ({ subsets: ["latin"], weight:"700" });
 
@@ -15,11 +16,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <head>
         <link rel="icon" href="./logo.svg" type="image/svg+xml"/>
       </head>
-      <body className={montserrrat.className}>{children}</body>
+      <body className={montserrrat.className}>
+        {children}
+        <BotonWhatsApp />
+      </body>
+      
     </html>
   );
 }
