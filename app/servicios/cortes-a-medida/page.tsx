@@ -7,6 +7,7 @@ export default function Cortes() {
     {
       name: "Placas Chapadur",
       description: "Común, blanco o perforado.",
+      espesores:"",
       image: "/images/chapadur.jpg",
       whatsappLink:
         "https://wa.me/+541151742249?text=Quiero%20comprar%20Placas%20Chapadur",
@@ -14,6 +15,7 @@ export default function Cortes() {
     {
       name: "Terciado",
       description: "Placas de madera de 3 mm.",
+      espesores:"",
       image: "/images/terciado.jpg",
       whatsappLink:
         "https://wa.me/+541151742249?text=Quiero%20comprar%20Terciado",
@@ -21,13 +23,15 @@ export default function Cortes() {
     {
       name: "Fibrofacil",
       description: "Se fracciona en distintos espesores. MDF.",
+      espesores:"",
       image: "/images/fibrofacil.jpg",
       whatsappLink:
         "https://wa.me/+541151742249?text=Quiero%20comprar%20Fibrofacil",
     },
     {
       name: "Tablero de Madera",
-      description: "Distintos espesores, madera añadida.",
+      description: "",
+      espesores:"",
       image: "/images/tablero.jpg",
       whatsappLink:
         "https://wa.me/+541151742249?text=Quiero%20comprar%20Tablero%20de%20Madera",
@@ -35,6 +39,7 @@ export default function Cortes() {
     {
       name: "Varillas",
       description: "Distintos tamaños en pulgadas.",
+      espesores:"",
       image: "/images/varillas.jpg",
       whatsappLink:
         "https://wa.me/+541151742249?text=Quiero%20comprar%20Varillas",
@@ -42,6 +47,7 @@ export default function Cortes() {
     {
       name: "Listonadas",
       description: "Distintos ancho y espesor.",
+      espesores:"",
       image: "/images/listonadas.jpg",
       whatsappLink:
         "https://wa.me/+541151742249?text=Quiero%20comprar%20Listonadas",
@@ -79,6 +85,7 @@ export default function Cortes() {
                     {corte.name}
                   </h3>
                   <p className="text-gray-600 mb-4">{corte.description}</p>
+                  <div className="text-gray-600"> {corte.espesores} </div>
                 </div>
                 <div className="mt-auto">
                   <a
