@@ -45,7 +45,7 @@ export default function ProductosHero() {
             disableOnInteraction: false,
           }}
           modules={[EffectCoverflow, Autoplay]}
-          className="w-full max-w-4xl mx-auto"
+          className="w-full max-w-4xl mx-auto" 
         >
           {productos.map((producto) => (
             <SwiperSlide

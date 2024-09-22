@@ -31,7 +31,7 @@ export const productos = [
     },
     {
         id: 3,
-        categoria: '',
+        categoria: 'Habitación',
         titulo: 'Mesa de luz con puerta',
         descripcion: 'Mesa funcional de estilo escandinavo, elaborada en madera de pino, ideal para complementar cualquier dormitorio',
         caracteristicas: [
@@ -44,7 +44,7 @@ export const productos = [
     },
     {
         id: 4,
-        categoria: '',
+        categoria: ["Living", "Cocina"],
         titulo: 'Bodega estilo barril',
         descripcion: ' Es para almacenar 5 botelas, esta bodega es perfecta para almacenarlas de manera elegante y organizada',
         caracteristicas: [
@@ -96,7 +96,7 @@ export const productos = [
     },
     {
         id: 8,
-        categoria: '',
+        categoria: ["Living", "Cocina", "Baño"],
         titulo: 'Estantería con 2 puertas',
         descripcion: 'Mueble estantería en forma de escalera, con 2 puertas en madera de pino, ideal para un almacenamiento elegante y funcional.',
         caracteristicas: [
@@ -109,7 +109,7 @@ export const productos = [
     },
     {
         id: 9,
-        categoria: '',
+        categoria: ["Living", "Cocina", "Baño"],
         titulo: 'Estanteria estilo verdulero',
         descripcion: 'Estilo verdulero en madera de pino, con estantes de tablitas, ideal para exhibir frutas y verduras de manera organizada y atractiva.',
         caracteristicas: [
@@ -122,7 +122,7 @@ export const productos = [
     },
     {
         id: 10,
-        categoria: 'Baño',
+        categoria: ["Living", "Cocina", "Baño"],
         titulo: 'Estanteria con 5 estantes',
         descripcion: 'Estantería multifuncional de madera de pino, con 5 estantes de tablitas, perfecta para organizar y decorar cualquier espacio.',
         caracteristicas: [
@@ -135,7 +135,7 @@ export const productos = [
     },
     {
         id: 11,
-        categoria: '',
+        categoria: ["Living", "Habitación"],
         titulo: 'Silla de niños',
         descripcion: 'Silla para niños en madera de pino, disponible en varios modelos, perfecta para brindar comodidad y estilo en cualquier habitación infantil.',
         caracteristicas: [
@@ -148,7 +148,7 @@ export const productos = [
     },
     {
         id: 12,
-        categoria: '',
+        categoria: ["Living","Cocina", "Habitación"],
         titulo: 'Banco de madera',
         descripcion: 'Bancos de madera de pino en varias alturas (30, 45, 60 y 70 cm), ideales para exteriores o interiores, con patas robustas y diseño funcional.',
         caracteristicas: [
@@ -161,7 +161,7 @@ export const productos = [
     },
     {
         id: 13,
-        categoria: '',
+        categoria: ["Living", "Habitación"],
         titulo: 'Silla para niños Tapizada',
         descripcion: 'Silla tapizada con apoya brazos, perfecta para niños y niñas, que combina comodidad y estilo en cualquier espacio infantil.',
         caracteristicas: [
@@ -174,7 +174,7 @@ export const productos = [
     },
     {
         id: 14,
-        categoria: '',
+        categoria: "Cocina",
         titulo: 'Banco escalera',
         descripcion: 'Banco escalera de madera de pino, disponible en alturas de 60 y 80 cm, con patas reforzadas de 2"x2" para mayor estabilidad y durabilidad.',
         caracteristicas: [
@@ -187,7 +187,7 @@ export const productos = [
     },
     {
         id: 15,
-        categoria: '',
+        categoria: 'Living',
         titulo: 'Mesa multifuncional escandinava',
         descripcion: 'Mesa multifuncional de madera de pino en estilo escandinavo, con un cajón y un espacio con fondo, ideal para cualquier ambiente.',
         caracteristicas: [
@@ -200,7 +200,7 @@ export const productos = [
     },
     {
         id: 16,
-        categoria: '',
+        categoria: 'Living',
         titulo: 'Atriles',
         descripcion: 'Atriles de madera de pino en distintas medidas: pequeño para mesa, mediano y alto, ideales para exhibir libros o partituras.',
         caracteristicas: [
@@ -213,7 +213,7 @@ export const productos = [
     },
     {
         id: 17,
-        categoria: '',
+        categoria: ["Living", "Habitación"],
         titulo: 'Porta lámparas',
         descripcion: 'Porta lámpara artesanal de madera de pino, perfecto para agregar un toque cálido y natural a tu espacio.',
         caracteristicas: [
@@ -226,7 +226,7 @@ export const productos = [
     },
     {
         id: 18,
-        categoria: '',
+        categoria: ["Habitación", "Cocina"],
         titulo: 'Canasto de madera',
         descripcion: 'Canasto de madera de pino con tablitas, multifuncional y elegante, ideal para organizar y decorar cualquier espacio.',
         caracteristicas: [
@@ -239,7 +239,7 @@ export const productos = [
     },
     {
         id: 19,
-        categoria: '',
+        categoria: 'Cocina',
         titulo: 'Bandeja rústica con manijas',
         descripcion: 'Bandeja rústica en tablitas de madera de pino, con 2 manijas, perfecta para servir y decorar con un toque natural.',
         caracteristicas: [
@@ -252,7 +252,7 @@ export const productos = [
     },
     {
         id: 20,
-        categoria: '',
+        categoria: 'Habitación',
         titulo: 'Dresuar de madera',
         descripcion: 'Dresuar de madera de pino con espejo, 2 cajones y parantes torneados, ideal para agregar estilo y funcionalidad a tu entrada.',
         caracteristicas: [
@@ -265,7 +265,7 @@ export const productos = [
     },
     {
         id: 21,
-        categoria: '',
+        categoria: ["Living", "Habitación", "Baño", "Cocina"],
         titulo: 'Soporte para estantes',
         descripcion: 'Soportes para estantes de madera de pino, fabricados a medida según la profundidad requerida, ideales para un ajuste perfecto y seguro.',
         caracteristicas: [
