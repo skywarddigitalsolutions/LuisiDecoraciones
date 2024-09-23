@@ -34,7 +34,7 @@ export default function ServiciosHero() {
                 {/* Segundo Card */}
                 <article className="bg-white shadow-[0_8px_15px_rgba(255,255,255,0.2)] rounded-2xl p-6 flex flex-col justify-between h-96 pt-8 lg:h-auto lg:max-w-xs lg:w-1/3 mb-8 lg:mb-0">
                     <div className="flex-1">
-                        <h3 className="text-2xl font-semibold text-center text-gris mb-4">Muebles A medida</h3>
+                        <h3 className="text-2xl font-semibold text-center text-gris mb-4">Muebles a medida</h3>
                         <p className="text-gray-600 text-center lg:mb-5">
                             Ofrecemos una selección de muebles de pino tanto estándar como personalizados, adaptados a tus gustos y necesidades. 
                             Desde cajoneras y baúles hasta escaleras y muebles infantiles.

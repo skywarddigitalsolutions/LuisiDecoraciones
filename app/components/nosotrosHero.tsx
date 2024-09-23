@@ -1,11 +1,11 @@
 import Image from 'next/image';
-import Fondo from '../../public/fondo.webp';
+import Fondo from '../../public/fototaller6.webp';
 import { CheckBadgeIcon, StarIcon } from '@heroicons/react/24/solid';
 import { HiWrenchScrewdriver } from 'react-icons/hi2';
 
 export default function NosotrosHero() {
     return (
-        <div className="bg-crema min-h-screen  py-12 px-6 relative">
+        <div className="bg-crema min-h-screen lg:min-h-[40rem] py-12 px-6 relative">
             <h2 className="text-marron text-4xl md:text-5xl font-bold text-center mb-12">Nuestra historia</h2>
 
             <div className="relative flex flex-col items-center xl:items-start lg:flex-row lg:justify-between gap-6 lg:gap-12 lg:px-12">

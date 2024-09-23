@@ -3,6 +3,7 @@ import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 import { FaPhoneAlt, FaMapMarkerAlt, FaInstagram, FaFacebook } from "react-icons/fa";
 import Head from "next/head";
+import Image from "next/image";
 export default function Contacto() {
     return (
         <>
@@ -55,10 +56,12 @@ export default function Contacto() {
 
                     {/* Imagen del local */}
                     <div className="lg:w-1/2">
-                        <img
-                            src="./fondo.webp" 
+                        <Image
+                            src="/fototaller6.webp" 
                             alt="Imagen del Local de Luisi Decoraciones"
                             className="w-full h-full object-cover rounded-lg"
+                            width={500}
+                            height={500}
                         />
                     </div>
                 </div>

@@ -3,23 +3,24 @@ import { useState } from "react";
 import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 import Head from "next/head";
+import Image from "next/image";
 
 export default function Cortes() {
   const cortes = [
     {
       name: "Placas Chapadur",
       description:
-        "disponibles en versiones comunes (marrón), blanco, o blanco perforado, ideales para múltiples usos. Se venden en plancha entera o fraccionada.",
+        "Disponibles en versiones comunes (marrón), blanco, o blanco perforado, ideales para múltiples usos. Se venden en plancha entera o fraccionada.",
       espesores: ["3mm"],
       dimensiones: ["2,75 x 1,22 m", "1,20 x 2,75 m"],
-      image: "/images/chapadur.jpg",
+      image: "/Chapadur.webp",
       whatsappLink:
         "https://wa.me/+541151742249?text=Quiero%20comprar%20Placas%20Chapadur%20de%20",
     },
     {
       name: "Terciado",
       description:
-        "disponibles en varios espesores, incluyendo opciones fenólicas, ideales para proyectos de construcción y carpintería. Se venden en hoja entera o fraccionados.",
+        "Disponibles en varios espesores, incluyendo opciones fenólicas, ideales para proyectos de construcción y carpintería. Se venden en hoja entera o fraccionados.",
       espesores: ["3mm", "8mm", "18mm"],
       dimensiones: [
         "2,10 x 1,60 m",
@@ -27,16 +28,16 @@ export default function Cortes() {
         "2,20 x 1,60 m",
         "2,39 x 1,22 m",
       ],
-      image: "/images/terciado.jpg",
+      image: "/Terciado.webp",
       whatsappLink:
         "https://wa.me/+541151742249?text=Quiero%20comprar%20Terciado%20de%20",
     },
     {
       name: "Fibrofacil",
-      description: "",
-      espesores: [],
-      dimensiones: [],
-      image: "/images/fibrofacil.jpg",
+      description: "Tableros de fibrofacil ideales para proyectos de carpintería y manualidades. Disponibles en varias medidas. Se venden en planchas enteras o fraccionadas.",
+      espesores: ["2,60 x 1,83 m"],
+      dimensiones: ["3mm", "5mm", "10mm", "12mm", "15mm", "18mm"],
+      image: "/Hojas-de-fibrofacil.webp",
       whatsappLink:
         "https://wa.me/+541151742249?text=Quiero%20comprar%20Fibrofacil%20de%20",
     },
@@ -46,25 +47,25 @@ export default function Cortes() {
         "Disponibles en varios espesores, ideales para proyectos de carpintería. Se venden fraccionados o en hoja completa (Las dimensiones pueden variar según la partida)",
       espesores: ["10mm", "15mm", "18mm", "23mm"],
       dimensiones: ["1,20 x 3,05 m"],
-      image: "/images/tablero.jpg",
+      image: "/Tablero-de-madera.webp",
       whatsappLink:
         "https://wa.me/+541151742249?text=Quiero%20comprar%20Tablero%20de%20",
     },
     {
-      name: "Varillas",
-      description: "",
-      espesores: [],
-      dimensiones: [],
-      image: "/images/varillas.jpg",
+      name: "Molduras",
+      description: "Molduras de madera disponibles en diferentes estilos y tamaños, perfectas para detalles decorativos. Se venden por metro lineal.",
+      espesores: ['1/2"', '3/4"'],
+      dimensiones: ["3mm"],
+      image: "/Molduras-de-plastico-y-madera.webp",
       whatsappLink:
         "https://wa.me/+541151742249?text=Quiero%20comprar%20Varillas%20de%20",
     },
     {
-      name: "Listonadas",
-      description: "",
-      espesores: [],
-      dimensiones: [],
-      image: "/images/listonadas.jpg",
+      name: "Listones",
+      description: "Listones de madera, ideales para estructuras y acabados. Disponibles en diversas dimensiones y largos, perfectos para cualquier proyecto.",
+      espesores: ['1/2' , '1"' , '1"1/2' , '3/4"' , '2"' , '3"', '4"'],
+      dimensiones: ['3m x 1"', '3m x 2"', '3m x 3"', '3m x 4"',],
+      image: "/Listones.webp",
       whatsappLink:
         "https://wa.me/+541151742249?text=Quiero%20comprar%20Listonadas%20de%20",
     },
@@ -72,9 +73,9 @@ export default function Cortes() {
       name: "Machimbre",
       description:
         "Disponible en dos opciones de tamaño, ideal para revestimientos y techos. Se vende en tiras enteras.",
-      espesores: [],
-      dimensiones: [],
-      image: "/images/listonadas.jpg",
+      espesores: ['1/2"'],
+      dimensiones: ['1/2" x 4"', '1/2" x 5"'],
+      image: "/Machimbre.webp",
       whatsappLink:
         "https://wa.me/+541151742249?text=Quiero%20comprar%20Listonadas%20de%20",
     },
@@ -115,10 +116,12 @@ export default function Cortes() {
                 className="bg-gray-100 p-6 rounded-lg shadow-md flex flex-col justify-between"
               >
                 <div>
-                  <img
+                  <Image
                     src={corte.image}
                     alt={corte.name}
                     className="w-full h-48 object-cover rounded-md mb-4"
+                    width={500}
+                    height={500}
                   />
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">
                     {corte.name}

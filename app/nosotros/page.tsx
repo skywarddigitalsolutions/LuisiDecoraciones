@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 import Head from "next/head";
@@ -28,10 +29,12 @@ export default function Nosotros() {
                     {/* Imagen y fondo */}
                     <div className="relative lg:w-1/2">
                         <div className="bg-marron rounded-2xl p-4 flex items-center justify-center h-full">
-                            <img
-                                src="./fondo.webp" 
-                                alt="Foto del fundador de Luisi Decoraciones"
-                                className="w-full h-full object-cover rounded-2xl"
+                            <Image
+                                src="/Quienes-somos.webp" 
+                                alt="Luisi Decoraciones local"
+                                className="w-full h-full object-contain rounded-2xl"
+                                width={500}
+                                height={500}
                             />
                         </div>
                     </div>
