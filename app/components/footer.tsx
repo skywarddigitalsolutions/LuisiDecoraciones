@@ -12,7 +12,7 @@ export default function Footer() {
     <footer className="bg-marron text-crema py-8 px-6">
       <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center lg:items-center space-y-8 lg:space-y-0">
         {/* Sección de logo y descripción */}
-        <div className="flex flex-col items-center lg:items-center gap-2 w-full lg:w-1/3">
+        <div className="flex flex-col items-center lg:items-center  gap-2 w-full lg:w-1/3">
           <Image src={Logo} alt="Logo" className="mb-2 h-12 lg:h-16 w-auto" />
           <p className="text-sm lg:text-lg text-center">
             Construimos tus sueños en madera. Escríbenos para cotizar tu corte
