@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState } from "react";
 import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
@@ -8,7 +8,8 @@ export default function Cortes() {
   const cortes = [
     {
       name: "Placas Chapadur",
-      description: "disponibles en versiones comunes (marrón), blanco, o blanco perforado, ideales para múltiples usos. Se venden en plancha entera o fraccionada.",
+      description:
+        "disponibles en versiones comunes (marrón), blanco, o blanco perforado, ideales para múltiples usos. Se venden en plancha entera o fraccionada.",
       espesores: ["3mm"],
       dimensiones: ["2,75 x 1,22 m", "1,20 x 2,75 m"],
       image: "/images/chapadur.jpg",
@@ -17,9 +18,15 @@ export default function Cortes() {
     },
     {
       name: "Terciado",
-      description: "disponibles en varios espesores, incluyendo opciones fenólicas, ideales para proyectos de construcción y carpintería. Se venden en hoja entera o fraccionados.",
+      description:
+        "disponibles en varios espesores, incluyendo opciones fenólicas, ideales para proyectos de construcción y carpintería. Se venden en hoja entera o fraccionados.",
       espesores: ["3mm", "8mm", "18mm"],
-      dimensiones: ["2,10 x 1,60 m", "2,39 x 1,60 m", "2,20 x 1,60 m", "2,39 x 1,22 m"],
+      dimensiones: [
+        "2,10 x 1,60 m",
+        "2,39 x 1,60 m",
+        "2,20 x 1,60 m",
+        "2,39 x 1,22 m",
+      ],
       image: "/images/terciado.jpg",
       whatsappLink:
         "https://wa.me/+541151742249?text=Quiero%20comprar%20Terciado%20de%20",
@@ -35,7 +42,8 @@ export default function Cortes() {
     },
     {
       name: "Tablero de Madera de Pino",
-      description: "Disponibles en varios espesores, ideales para proyectos de carpintería. Se venden fraccionados o en hoja completa (Las dimensiones pueden variar según la partida)",
+      description:
+        "Disponibles en varios espesores, ideales para proyectos de carpintería. Se venden fraccionados o en hoja completa (Las dimensiones pueden variar según la partida)",
       espesores: ["10mm", "15mm", "18mm", "23mm"],
       dimensiones: ["1,20 x 3,05 m"],
       image: "/images/tablero.jpg",
@@ -62,7 +70,8 @@ export default function Cortes() {
     },
     {
       name: "Machimbre",
-      description: "Disponible en dos opciones de tamaño, ideal para revestimientos y techos. Se vende en tiras enteras.",
+      description:
+        "Disponible en dos opciones de tamaño, ideal para revestimientos y techos. Se vende en tiras enteras.",
       espesores: [],
       dimensiones: [],
       image: "/images/listonadas.jpg",
@@ -71,16 +80,16 @@ export default function Cortes() {
     },
   ];
 
-  const [selectedEspesor, setSelectedEspesor] = useState({});
-  const [selectedDimension, setSelectedDimension] = useState({});
+  const [selectedEspesor, setSelectedEspesor] = useState<{ [key: string]: string }>({});
+  const [selectedDimension, setSelectedDimension] = useState<{ [key: string]: string }>({});
 
   // Función para actualizar el espesor seleccionado
-  const handleEspesorClick = (productName, espesor) => {
+  const handleEspesorClick = (productName: any, espesor: any) => {
     setSelectedEspesor({ ...selectedEspesor, [productName]: espesor });
   };
 
   // Función para actualizar la dimensión seleccionada
-  const handleDimensionClick = (productName, dimension) => {
+  const handleDimensionClick = (productName: any, dimension: any) => {
     setSelectedDimension({ ...selectedDimension, [productName]: dimension });
   };
 
@@ -118,12 +127,16 @@ export default function Cortes() {
 
                   {/* Lista de espesores */}
                   <div className="mb-4">
-                    <h4 className="text-gray-800 font-semibold">Espesores disponibles:</h4>
+                    <h4 className="text-gray-800 font-semibold">
+                      Espesores disponibles:
+                    </h4>
                     <div className="flex gap-2 mt-2 flex-wrap">
                       {corte.espesores.map((espesor) => (
                         <button
                           key={espesor}
-                          onClick={() => handleEspesorClick(corte.name, espesor)}
+                          onClick={() =>
+                            handleEspesorClick(corte.name, espesor)
+                          }
                           className={`px-3 py-1 rounded-full border ${
                             selectedEspesor[corte.name] === espesor
                               ? "bg-marron text-white"
@@ -138,12 +151,16 @@ export default function Cortes() {
 
                   {/* Lista de dimensiones */}
                   <div className="mb-4">
-                    <h4 className="text-gray-800 font-semibold">Dimensiones disponibles:</h4>
+                    <h4 className="text-gray-800 font-semibold">
+                      Dimensiones disponibles:
+                    </h4>
                     <div className="flex gap-2 mt-2 flex-wrap">
                       {corte.dimensiones.map((dimension) => (
                         <button
                           key={dimension}
-                          onClick={() => handleDimensionClick(corte.name, dimension)}
+                          onClick={() =>
+                            handleDimensionClick(corte.name, dimension)
+                          }
                           className={`px-3 py-1 rounded-full border ${
                             selectedDimension[corte.name] === dimension
                               ? "bg-marron text-white"
@@ -159,8 +176,12 @@ export default function Cortes() {
 
                 <div className="mt-auto">
                   <a
-                    href={`${corte.whatsappLink}${selectedEspesor[corte.name] || ""}${
-                      selectedDimension[corte.name] ? `%20y%20de%20${selectedDimension[corte.name]}` : ""
+                    href={`${corte.whatsappLink}${
+                      selectedEspesor[corte.name] || ""
+                    }${
+                      selectedDimension[corte.name]
+                        ? `%20y%20de%20${selectedDimension[corte.name]}`
+                        : ""
                     }`}
                     className="text-white bg-marron hover:bg-marron-dark px-4 py-2 rounded-lg text-sm font-medium block text-center"
                   >
