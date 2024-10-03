@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import { productos } from "./products";
@@ -7,9 +7,12 @@ import Image from "next/image";
 import { FiltroBoton } from "../components/FiltroBoton";
 import BtnScrollTop from "../components/BtnScrollTop";
 import Head from "next/head";
+import Link from "next/link";
+import Loader from "../components/loader";
 
 export default function Productos() {
   const [filtro, setFiltro] = useState("Todos");
+  const [loading, setLoading] = useState(false);
 
   const handleFiltroChange = (categoria: string) => {
     setFiltro(categoria);
@@ -24,17 +27,41 @@ export default function Productos() {
 
   const filtros = ["Todos", "Living", "Habitación", "Cocina", "Baño"];
 
+  const slugName = productos.map((producto) =>
+    producto.titulo
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/ /g, "-")
+  );
+
+  // Función para manejar el click en el link
+  const handleVerMasClick = () => {
+    setLoading(true); // Activa el loader
+  };
+
+  // Efecto para hacer scroll a la parte superior cuando loading cambia
+  useEffect(() => {
+    if (loading) {
+      window.scrollTo(0, 0);
+    }
+  }, [loading]);
+
   return (
     <>
       <Head>
         <title>Productos de Carpintería | Luisi Decoraciones</title>
-        <meta 
-          name="description" 
-          content="Descubre una amplia variedad de productos de carpintería de alta calidad en Luisi Decoraciones. Ofrecemos cortes a medida, maderas, muebles personalizados y mucho más en Monte Castro." 
+        <meta
+          name="description"
+          content="Descubre una amplia variedad de productos de carpintería de alta calidad en Luisi Decoraciones. Ofrecemos cortes a medida, maderas, muebles personalizados y mucho más en Monte Castro."
         />
       </Head>
       <Navbar />
-      <div className="bg-crema min-h-screen py-32 px-6">
+
+      {/* Mostrar loader cuando loading es true */}
+      {loading && <Loader />}
+
+      <div className={`bg-crema min-h-screen py-32 px-6 ${loading ? "hidden" : ""}`}>
         <h2 className="text-marron text-4xl md:text-5xl font-bold text-center mb-6">
           Nuestros Productos
         </h2>
@@ -72,27 +99,13 @@ export default function Productos() {
               <p className="text-marron/70 mb-4 flex-grow">
                 {producto.descripcion}
               </p>
-              <div className="text-marron mb-8 grid grid-cols-4 gap-4">
-                {producto.caracteristicas.map((caracteristica, index) => (
-                  <div
-                    key={Number(index)}
-                    className="flex flex-col items-center"
-                  >
-                    {caracteristica.icono}
-                    <p className="mt-2 text-center">{caracteristica.texto}</p>
-                  </div>
-                ))}
-              </div>
-              <a
-                href={`https://wa.me/+541151742249?text=${encodeURIComponent(
-                  `Hola, estoy interesado en el producto: ${producto.titulo}`
-                )}`}
-                className="bg-marron text-beige text-center font-semibold py-3 px-6 rounded-md hover:bg-beige hover:text-marron transition-colors lg:w-40 "
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href={`/productos/${slugName[Number(producto.id) - 1]}`}
+                onClick={handleVerMasClick} // Manejar el clic para activar el loader
+                className="bg-marron text-beige p-4 rounded-md hover:bg-beige hover:text-marron text-center"
               >
-                Comprar
-              </a>
+                Ver más
+              </Link>
             </div>
           ))}
         </div>
