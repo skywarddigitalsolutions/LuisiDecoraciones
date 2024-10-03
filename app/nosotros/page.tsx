@@ -30,7 +30,7 @@ export default function Nosotros() {
                     <div className="relative lg:w-1/2">
                         <div className="bg-marron rounded-2xl p-4 flex items-center justify-center h-full">
                             <Image
-                                src="/Quienes-somos.webp" 
+                                src="/historia-luisi.webp" 
                                 alt="Luisi Decoraciones local"
                                 className="w-full h-full object-contain rounded-2xl"
                                 width={500}

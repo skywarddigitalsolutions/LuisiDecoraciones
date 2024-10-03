@@ -6,8 +6,8 @@ import BotonWhatsApp from "./components/BotonWhatsApp";
 const montserrrat = Montserrat ({ subsets: ["latin"], weight:"700" });
 
 export const metadata: Metadata = {
-  title: "Luisi Decoraciones",
-  description: "Construimos tus sueños en madera - Cortes a Medida",
+  title: "Luisi Decoraciones - Cortes a Medida",
+  description: "Muebles personalizados a medida para tu hogar.",
 };
 
 export default function RootLayout({
