@@ -15,7 +15,7 @@ export default function Cortes() {
       dimensiones: ["2,75 x 1,22 m", "1,20 x 2,75 m"],
       image: "/Chapadur.webp",
       whatsappLink:
-        "https://wa.me/+541151742249?text=Quiero%20comprar%20Placas%20Chapadur%20de%20",
+        "https://wa.me/+541139044640?text=Quiero%20comprar%20Placas%20Chapadur%20de%20",
     },
     {
       name: "Terciado",
@@ -30,7 +30,7 @@ export default function Cortes() {
       ],
       image: "/Terciado.webp",
       whatsappLink:
-        "https://wa.me/+541151742249?text=Quiero%20comprar%20Terciado%20de%20",
+        "https://wa.me/+541139044640?text=Quiero%20comprar%20Terciado%20de%20",
     },
     {
       name: "Fibrofacil",
@@ -39,7 +39,7 @@ export default function Cortes() {
       dimensiones: ["3mm", "5mm", "10mm", "12mm", "15mm", "18mm"],
       image: "/Hojas-de-fibrofacil.webp",
       whatsappLink:
-        "https://wa.me/+541151742249?text=Quiero%20comprar%20Fibrofacil%20de%20",
+        "https://wa.me/+541139044640?text=Quiero%20comprar%20Fibrofacil%20de%20",
     },
     {
       name: "Tablero de Madera de Pino",
@@ -49,7 +49,7 @@ export default function Cortes() {
       dimensiones: ["1,20 x 3,05 m"],
       image: "/Tablero-de-madera.webp",
       whatsappLink:
-        "https://wa.me/+541151742249?text=Quiero%20comprar%20Tablero%20de%20",
+        "https://wa.me/+541139044640?text=Quiero%20comprar%20Tablero%20de%20",
     },
     {
       name: "Molduras",
@@ -58,7 +58,7 @@ export default function Cortes() {
       dimensiones: ["3mm"],
       image: "/Molduras-de-plastico-y-madera.webp",
       whatsappLink:
-        "https://wa.me/+541151742249?text=Quiero%20comprar%20Varillas%20de%20",
+        "https://wa.me/+541139044640?text=Quiero%20comprar%20Varillas%20de%20",
     },
     {
       name: "Listones",
@@ -67,7 +67,7 @@ export default function Cortes() {
       dimensiones: ['3m x 1"', '3m x 2"', '3m x 3"', '3m x 4"',],
       image: "/Listones.webp",
       whatsappLink:
-        "https://wa.me/+541151742249?text=Quiero%20comprar%20Listonadas%20de%20",
+        "https://wa.me/+541139044640?text=Quiero%20comprar%20Listonadas%20de%20",
     },
     {
       name: "Machimbre",
@@ -77,7 +77,7 @@ export default function Cortes() {
       dimensiones: ['1/2" x 4"', '1/2" x 5"'],
       image: "/Machimbre.webp",
       whatsappLink:
-        "https://wa.me/+541151742249?text=Quiero%20comprar%20Listonadas%20de%20",
+        "https://wa.me/+541139044640?text=Quiero%20comprar%20Listonadas%20de%20",
     },
   ];
 

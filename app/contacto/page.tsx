@@ -38,7 +38,7 @@ export default function Contacto() {
                         </div>
                         <div className="flex items-center mb-4">
                             <FaPhoneAlt className="text-2xl text-marron mr-4" />
-                            <a href="https://wa.me/+541151742249" target="_blank" className="text-base text-marron">+541151742249</a>
+                            <a href="https://wa.me/+541139044640" target="_blank" className="text-base text-marron">+541139044640</a>
                         </div>
                         <div className="flex items-center mb-4">
                             <FaInstagram className="text-2xl text-marron mr-4" />

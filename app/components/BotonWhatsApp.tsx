@@ -3,7 +3,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 
 const BotonWhatsApp: React.FC = () => {
   const mensaje = 'Hola Luisi Decoraciones, me gustaría recibir más información sobre sus productos.';
-  const numeroWhatsApp: string = "+541151742249";
+  const numeroWhatsApp: string = "+541139044640";
     const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(
       mensaje
     )}`;

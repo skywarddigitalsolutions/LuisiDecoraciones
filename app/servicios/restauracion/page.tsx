@@ -23,7 +23,7 @@ export default function Restauracion() {
         const mensaje = `Hola, me gustaría solicitar una cotización para la restauración de un mueble. Aquí están los detalles:\n\nNombre: ${formData.nombre}\nTeléfono: ${formData.telefono}\nDescripción del Mueble: ${formData.descripcion}\nDetalles Adicionales: ${formData.detalles}`;
 
         // Número de teléfono de WhatsApp (reemplaza con el tuyo)
-        const numeroWhatsApp: string = '+541151742249'; // Incluye el código de país sin signos "+"
+        const numeroWhatsApp: string = '+541139044640'; // Incluye el código de país sin signos "+"
         const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
 
         // Redirigir al usuario a WhatsApp
